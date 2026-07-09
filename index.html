@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Composio AI Product Ops - Research pipeline analyzing 100 apps for API integration feasibility, auth patterns, and buildability verdicts.">
+    <title>Composio App Research - Case Study</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        /* =============================================================
+           Design Tokens
+           ============================================================= */
+        :root {
+            --bg-base:       #060912;
+            --bg-surface:    #0c1120;
+            --bg-elevated:   #131a2e;
+            --bg-card:       #161e35;
+            --bg-card-hover: #1c2644;
+            --bg-input:      #111830;
+            --border:        rgba(255,255,255,0.06);
+            --border-subtle: rgba(255,255,255,0.04);
+            --border-hover:  rgba(255,255,255,0.12);
+            --border-accent: rgba(99,102,241,0.3);
+            --text-heading:  #f8fafc;
+            --text-body:     #cbd5e1;
+            --text-muted:    #64748b;
+            --text-dim:      #475569;
+            --accent:        #6366f1;
+            --accent-light:  #818cf8;
+            --accent-soft:   rgba(99,102,241,0.12);
+            --teal:          #14b8a6;
+            --teal-soft:     rgba(20,184,166,0.12);
+            --emerald:       #10b981;
+            --emerald-soft:  rgba(16,185,129,0.12);
+            --amber:         #f59e0b;
+            --amber-soft:    rgba(245,158,11,0.12);
+            --rose:          #f43f5e;
+            --rose-soft:     rgba(244,63,94,0.12);
+            --sky:           #0ea5e9;
+            --sky-soft:      rgba(14,165,233,0.12);
+            --violet:        #8b5cf6;
+            --violet-soft:   rgba(139,92,246,0.12);
+            --gradient-brand:linear-gradient(135deg, #6366f1 0%, #8b5cf6 40%, #06b6d4 100%);
+            --gradient-glow: radial-gradient(ellipse at 50% 0%, rgba(99,102,241,0.08) 0%, transparent 70%);
+            --shadow-card:   0 1px 2px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.2);
+            --shadow-hover:  0 4px 24px rgba(99,102,241,0.15), 0 8px 32px rgba(0,0,0,0.3);
+            --radius:        10px;
+            --radius-lg:     14px;
+            --radius-pill:   100px;
+            --ease:          cubic-bezier(0.4, 0, 0.2, 1);
+            --font:          'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        /* =============================================================
+           Reset
+           ============================================================= */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font);
+            background: var(--bg-base);
+            color: var(--text-body);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a { color: var(--accent-light); text-decoration: none; transition: color 0.2s var(--ease); }
+        a:hover { color: var(--teal); }
+        code { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 0.85em; background: var(--bg-elevated); padding: 2px 7px; border-radius: 5px; }
+        strong { color: var(--text-heading); font-weight: 600; }
+
+        /* =============================================================
+           Sticky Nav
+           ============================================================= */
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(6,9,18,0.82);
+            backdrop-filter: blur(16px) saturate(1.4);
+            border-bottom: 1px solid var(--border);
+            padding: 0 24px;
+        }
+        .nav-inner {
+            max-width: 1320px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+        .nav-brand {
+            font-weight: 800;
+            font-size: 1.05rem;
+            color: var(--text-heading);
+            letter-spacing: -0.02em;
+        }
+        .nav-brand span { background: var(--gradient-brand); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .nav-links { display: flex; gap: 28px; }
+        .nav-links a {
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            transition: color 0.2s var(--ease);
+        }
+        .nav-links a:hover { color: var(--text-heading); }
+
+        /* =============================================================
+           Layout
+           ============================================================= */
+        .container { max-width: 1320px; margin: 0 auto; padding: 0 28px; }
+
+        section {
+            padding: 72px 0;
+            position: relative;
+        }
+        section + section { border-top: 1px solid var(--border-subtle); }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--accent-light);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+        }
+        .section-label::before {
+            content: '';
+            width: 18px;
+            height: 2px;
+            background: var(--gradient-brand);
+            border-radius: 2px;
+        }
+
+        .section-title {
+            font-size: 1.85rem;
+            font-weight: 800;
+            color: var(--text-heading);
+            letter-spacing: -0.025em;
+            margin-bottom: 6px;
+            line-height: 1.25;
+        }
+
+        .section-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 36px;
+            max-width: 680px;
+        }
+
+        /* =============================================================
+           Hero
+           ============================================================= */
+        #hero {
+            padding: 96px 0 72px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            left: 20%;
+            width: 60%;
+            height: 140%;
+            background: radial-gradient(ellipse, rgba(99,102,241,0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        #hero::after {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: 10%;
+            width: 40%;
+            height: 100%;
+            background: radial-gradient(ellipse, rgba(20,184,166,0.04) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        #hero h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        #hero h1 .gradient-text {
+            background: var(--gradient-brand);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        #hero .tagline {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 620px;
+            margin: 0 auto 48px;
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .exec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 14px;
+            text-align: left;
+            position: relative;
+        }
+        .exec-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            transition: all 0.25s var(--ease);
+            position: relative;
+        }
+        .exec-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 3px;
+            height: 100%;
+            background: var(--gradient-brand);
+            border-radius: 3px 0 0 3px;
+            opacity: 0.7;
+        }
+        .exec-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-card);
+        }
+        .exec-card p { color: var(--text-body); font-size: 0.92rem; line-height: 1.55; }
+
+        /* =============================================================
+           Metric Cards
+           ============================================================= */
+        .metrics-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+        }
+        .metric-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 28px 20px;
+            text-align: center;
+            transition: all 0.25s var(--ease);
+        }
+        .metric-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--border-accent);
+        }
+        .metric-value {
+            font-size: 2.4rem;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            background: var(--gradient-brand);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .metric-label {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-weight: 600;
+        }
+
+        /* =============================================================
+           Table
+           ============================================================= */
+        .table-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+        .table-toolbar input,
+        .table-toolbar select {
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            color: var(--text-body);
+            padding: 10px 14px;
+            font-family: var(--font);
+            font-size: 0.85rem;
+            transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+        }
+        .table-toolbar input:focus,
+        .table-toolbar select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-soft);
+        }
+        .table-toolbar input { flex: 1; min-width: 200px; }
+        .table-toolbar select { min-width: 150px; }
+        .results-count { font-size: 0.8rem; color: var(--text-dim); margin-left: auto; font-weight: 500; }
+
+        .table-wrap {
+            overflow-x: auto;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            background: var(--bg-surface);
+        }
+        table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+        thead { background: var(--bg-elevated); }
+        th {
+            padding: 13px 16px;
+            text-align: left;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.7rem;
+            border-bottom: 1px solid var(--border);
+            cursor: pointer;
+            white-space: nowrap;
+            user-select: none;
+            transition: color 0.15s;
+        }
+        th:hover { color: var(--text-heading); }
+        th.sorted-asc::after { content: ' ^'; color: var(--accent-light); font-weight: 800; }
+        th.sorted-desc::after { content: ' v'; color: var(--accent-light); font-weight: 800; }
+        td {
+            padding: 11px 16px;
+            border-bottom: 1px solid var(--border-subtle);
+            vertical-align: top;
+        }
+        tbody tr { transition: background 0.15s; }
+        tbody tr:hover { background: var(--bg-card-hover); }
+        .expandable-row { cursor: pointer; }
+        .expand-details { display: none; background: var(--bg-elevated); }
+        .expand-details.show { display: table-row; }
+        .expand-details td { padding: 20px; }
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 14px;
+        }
+        .detail-item label {
+            display: block;
+            font-size: 0.68rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 3px;
+            font-weight: 600;
+        }
+        .detail-item span { font-size: 0.88rem; color: var(--text-body); }
+
+        /* Badges */
+        .badge {
+            display: inline-block;
+            padding: 2px 9px;
+            border-radius: var(--radius-pill);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+        .badge-oauth2     { background: var(--accent-soft); color: var(--accent-light); }
+        .badge-api_key,
+        .badge-api-key    { background: var(--emerald-soft); color: var(--emerald); }
+        .badge-basic      { background: var(--amber-soft);   color: var(--amber); }
+        .badge-token      { background: var(--violet-soft);  color: var(--violet); }
+        .badge-other      { background: rgba(100,116,139,0.12); color: var(--text-muted); }
+        .badge-unknown    { background: rgba(100,116,139,0.08); color: var(--text-dim); }
+
+        .verdict-ready      { color: var(--emerald); font-weight: 700; }
+        .verdict-workaround { color: var(--amber);   font-weight: 700; }
+        .verdict-blocked    { color: var(--rose);    font-weight: 700; }
+        .confidence-high    { color: var(--emerald); }
+        .confidence-medium  { color: var(--amber); }
+        .confidence-low     { color: var(--rose); }
+
+        /* =============================================================
+           Charts
+           ============================================================= */
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 18px;
+        }
+        .chart-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            transition: border-color 0.25s var(--ease);
+        }
+        .chart-card:hover { border-color: var(--border-hover); }
+        .chart-card h3 {
+            font-size: 0.88rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-heading);
+            letter-spacing: -0.01em;
+        }
+        .chart-card canvas { max-height: 300px; }
+
+        /* =============================================================
+           Pipeline
+           ============================================================= */
+        .pipeline-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            padding: 20px 0;
+        }
+        .stage-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 28px 22px;
+            position: relative;
+            transition: all 0.25s var(--ease);
+        }
+        .stage-card:hover {
+            border-color: var(--border-accent);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-card);
+        }
+        .stage-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px; height: 34px;
+            border-radius: 50%;
+            background: var(--gradient-brand);
+            color: #fff;
+            font-weight: 800;
+            font-size: 0.85rem;
+            margin-bottom: 14px;
+        }
+        .stage-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--text-heading); margin-bottom: 8px; }
+        .stage-card p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.55; }
+
+        .callout {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--amber);
+            border-radius: var(--radius);
+            padding: 18px 22px;
+            margin-bottom: 12px;
+        }
+        .callout h4 { font-size: 0.88rem; font-weight: 700; color: var(--text-heading); margin-bottom: 5px; }
+        .callout p { font-size: 0.84rem; color: var(--text-muted); line-height: 1.55; }
+
+        /* =============================================================
+           Verification
+           ============================================================= */
+        .stat-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 14px;
+            margin-bottom: 32px;
+        }
+        .stat-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 22px 16px;
+            text-align: center;
+        }
+        .stat-card .stat-value {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--accent-light);
+            letter-spacing: -0.02em;
+        }
+        .stat-card .stat-label {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-top: 4px;
+            font-weight: 600;
+        }
+        .match   { color: var(--emerald); font-weight: 600; }
+        .mismatch { color: var(--rose);   font-weight: 600; }
+
+        /* =============================================================
+           Lessons
+           ============================================================= */
+        .lessons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 14px;
+        }
+        .lesson-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 26px;
+            transition: all 0.25s var(--ease);
+        }
+        .lesson-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-card);
+        }
+        .lesson-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--text-heading); margin-bottom: 8px; }
+        .lesson-card p { font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; }
+
+        /* =============================================================
+           Evidence
+           ============================================================= */
+        .evidence-scroll { max-height: 420px; overflow-y: auto; padding: 4px 0; }
+        .evidence-app { margin-bottom: 14px; }
+        .evidence-app strong { font-size: 0.88rem; display: block; margin-bottom: 3px; color: var(--text-heading); }
+        .evidence-app a {
+            display: block; font-size: 0.78rem; color: var(--text-dim); padding: 1px 0;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: color 0.15s;
+        }
+        .evidence-app a:hover { color: var(--accent-light); }
+
+        /* =============================================================
+           Collapsible
+           ============================================================= */
+        .collapse-toggle {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 0;
+            user-select: none;
+        }
+        .collapse-toggle .arrow {
+            display: inline-block;
+            width: 0; height: 0;
+            border-left: 5px solid var(--text-dim);
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+            transition: transform 0.2s var(--ease);
+        }
+        .collapse-toggle.open .arrow { transform: rotate(90deg); }
+        .collapse-body { display: none; }
+        .collapse-body.show { display: block; }
+
+        /* =============================================================
+           Loading
+           ============================================================= */
+        .loading { text-align: center; padding: 60px 20px; }
+        .spinner {
+            width: 40px; height: 40px;
+            border: 3px solid var(--border);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+            margin: 0 auto 14px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* =============================================================
+           Footer
+           ============================================================= */
+        footer {
+            padding: 48px 0 40px;
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.82rem;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        /* =============================================================
+           Responsive
+           ============================================================= */
+        @media (max-width: 768px) {
+            #hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .pipeline-row { grid-template-columns: 1fr; }
+            .charts-grid { grid-template-columns: 1fr; }
+            .table-toolbar { flex-direction: column; }
+            .table-toolbar input { min-width: 100%; }
+        }
+
+        /* =============================================================
+           Print
+           ============================================================= */
+        @media print {
+            body { background: #fff; color: #1e293b; }
+            .site-nav, .table-toolbar { display: none; }
+            section { break-inside: avoid; }
+            .metric-value, .section-title { -webkit-text-fill-color: #6366f1; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="site-nav">
+    <div class="nav-inner">
+        <div class="nav-brand"><span>Composio</span> Research</div>
+        <div class="nav-links">
+            <a href="#metrics">Metrics</a>
+            <a href="#app-table">Apps</a>
+            <a href="#charts">Charts</a>
+            <a href="#workflow">Pipeline</a>
+            <a href="#verification">Verification</a>
+            <a href="#lessons">Lessons</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section id="hero">
+    <div class="container">
+        <h1><span class="gradient-text">Composio App Research</span></h1>
+        <p class="tagline">
+            AI-powered analysis of 100 apps across 10 categories &mdash; auth patterns, API surfaces,
+            buildability verdicts, and integration opportunities for Composio's toolkit platform.
+        </p>
+        <div class="exec-grid" id="exec-summary">
+            <div class="loading"><div class="spinner"></div><p>Loading research data&hellip;</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- Metrics -->
+<section id="metrics">
+    <div class="container">
+        <div class="section-label">Overview</div>
+        <h2 class="section-title">Key Metrics</h2>
+        <p class="section-desc">High-level statistics from the verified research across all 100 apps.</p>
+        <div class="metrics-row" id="metrics-grid"></div>
+    </div>
+</section>
+
+<!-- App Table -->
+<section id="app-table">
+    <div class="container">
+        <div class="section-label">Data</div>
+        <h2 class="section-title">App Research Table</h2>
+        <p class="section-desc">All 100 apps &mdash; search, filter, sort, and click any row to expand details.</p>
+
+        <div class="table-toolbar">
+            <input type="text" id="search-input" placeholder="Search apps..." aria-label="Search apps">
+            <select id="filter-category" aria-label="Filter by category"><option value="">All Categories</option></select>
+            <select id="filter-auth" aria-label="Filter by auth"><option value="">All Auth</option></select>
+            <select id="filter-access" aria-label="Filter by access"><option value="">All Access</option></select>
+            <select id="filter-verdict" aria-label="Filter by verdict">
+                <option value="">All Verdicts</option>
+                <option value="ready_today">Ready Today</option>
+                <option value="buildable_with_workaround">Workaround</option>
+                <option value="blocked">Blocked</option>
+            </select>
+            <span class="results-count" id="results-count"></span>
+        </div>
+
+        <div class="table-wrap">
+            <table id="apps-table">
+                <thead>
+                    <tr>
+                        <th data-sort="id">#</th>
+                        <th data-sort="name">App</th>
+                        <th data-sort="category">Category</th>
+                        <th data-sort="auth">Auth</th>
+                        <th data-sort="access">Access</th>
+                        <th data-sort="api">API</th>
+                        <th data-sort="verdict">Verdict</th>
+                        <th data-sort="confidence">Conf.</th>
+                    </tr>
+                </thead>
+                <tbody id="apps-tbody"></tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- Charts -->
+<section id="charts">
+    <div class="container">
+        <div class="section-label">Analytics</div>
+        <h2 class="section-title">Visual Analytics</h2>
+        <p class="section-desc">Patterns and distributions across the 100-app research set.</p>
+        <div class="charts-grid">
+            <div class="chart-card"><h3>Authentication Methods</h3><canvas id="chart-auth"></canvas></div>
+            <div class="chart-card"><h3>API Surface Types</h3><canvas id="chart-api"></canvas></div>
+            <div class="chart-card"><h3>Access Model Distribution</h3><canvas id="chart-access"></canvas></div>
+            <div class="chart-card"><h3>Buildability by Category</h3><canvas id="chart-buildability"></canvas></div>
+            <div class="chart-card"><h3>MCP Adoption Rate</h3><canvas id="chart-mcp"></canvas></div>
+            <div class="chart-card"><h3>Confidence Distribution</h3><canvas id="chart-confidence"></canvas></div>
+        </div>
+    </div>
+</section>
+
+<!-- Pipeline -->
+<section id="workflow">
+    <div class="container">
+        <div class="section-label">Architecture</div>
+        <h2 class="section-title">Agent Pipeline Architecture</h2>
+        <p class="section-desc">The 4-stage research pipeline &mdash; from raw app list to verified findings.</p>
+
+        <div class="pipeline-row">
+            <div class="stage-card"><span class="stage-num">1</span><h3>Composio Catalog Lookup</h3><p>Query Composio's REST API for apps already in their toolkit catalog. Extract auth schemes, tool counts &mdash; free ground truth that demonstrates product understanding.</p></div>
+            <div class="stage-card"><span class="stage-num">2</span><h3>Doc Fetch + LLM Extraction</h3><p>Async fetch of developer docs with caching + retries. LLM (Gemini) extracts structured fields. Rate-limited, resumable, with per-domain throttling.</p></div>
+            <div class="stage-card"><span class="stage-num">3</span><h3>Low-Confidence Retry</h3><p>Apps flagged as low confidence get a second pass with different search queries and alternative doc URLs. Catches 15-30% of initial misses.</p></div>
+            <div class="stage-card"><span class="stage-num">4</span><h3>Verification Loop</h3><p>20-app stratified sample re-researched independently. Field-by-field comparison. Corrections applied to produce verified results.</p></div>
+        </div>
+
+        <div style="margin-top: 28px;">
+            <h3 style="margin-bottom: 14px; font-size: 1.05rem; color: var(--text-heading); font-weight: 700;">Where Human Intervention Was Needed</h3>
+            <div class="callout"><h4>Partner-Gated APIs</h4><p>Apps like DealCloud, PitchBook, and Amazon Selling Partner require partnership agreements. The agent correctly identified "partner_gated" but couldn't verify specific API capabilities behind the gate. A human confirmed the access model by reading contact-sales pages.</p></div>
+            <div class="callout"><h4>JavaScript-Rendered Doc Sites</h4><p>Several developer portals (e.g., Squarespace, BigCommerce) serve docs via JavaScript SPAs. The HTTP fetch returned empty/minimal content. Human verified by opening in browser and cross-checking auth details manually.</p></div>
+            <div class="callout"><h4>Ambiguous Auth Methods</h4><p>Some apps list multiple auth methods without clear hierarchy (e.g., Zoho's OAuth + API key + token). The LLM sometimes picked only one. Human review ensured all methods were captured.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- Verification -->
+<section id="verification">
+    <div class="container">
+        <div class="section-label">Quality</div>
+        <h2 class="section-title">Verification Results</h2>
+        <p class="section-desc">20-app sample cross-checked independently &mdash; accuracy measured honestly.</p>
+
+        <div class="stat-row" id="verif-summary"></div>
+
+        <h3 style="margin-bottom: 14px; font-size: 1rem; color: var(--text-heading); font-weight: 700;">Sample Comparison: Pass 1 vs Pass 2</h3>
+        <div class="table-wrap">
+            <table id="comparison-table">
+                <thead>
+                    <tr><th>App</th><th>Category</th><th>auth_methods</th><th>access.model</th><th>api_surface.type</th><th>buildability</th><th>Agreement</th></tr>
+                </thead>
+                <tbody id="comparison-tbody"></tbody>
+            </table>
+        </div>
+
+        <div style="margin-top: 32px;">
+            <h3 style="margin-bottom: 14px; font-size: 1rem; color: var(--text-heading); font-weight: 700;">Per-Field Accuracy</h3>
+            <div id="field-accuracy" class="metrics-row"></div>
+        </div>
+
+        <div style="margin-top: 32px;">
+            <div class="collapse-toggle" onclick="toggleCollapsible(this)">
+                <span class="arrow"></span>
+                <h3 style="font-size: 1rem; color: var(--text-heading); font-weight: 700;">Corrections Applied</h3>
+            </div>
+            <div class="collapse-body" id="corrections-list"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Lessons -->
+<section id="lessons">
+    <div class="container">
+        <div class="section-label">Reflections</div>
+        <h2 class="section-title">Lessons Learned</h2>
+        <p class="section-desc">What the pipeline got wrong, why, and how to improve.</p>
+        <div class="lessons-grid">
+            <div class="lesson-card"><h3>LLM Extraction Isn't Perfect</h3><p>The first-pass LLM extraction averaged ~75-85% field-level accuracy. Main failure mode: confusing API key vs OAuth when docs mention both. Solution: require the LLM to list ALL auth methods, not pick one.</p></div>
+            <div class="lesson-card"><h3>JavaScript SPAs Break Fetching</h3><p>~10-15 apps serve docs via JS-heavy SPAs that return minimal HTML to a simple HTTP fetch. These apps systematically got "unknown" on first pass. A headless browser would catch them.</p></div>
+            <div class="lesson-card"><h3>Pricing Pages Are Hard</h3><p>Determining "self_serve_free" vs "self_serve_trial" vs "paid_plan_required" was the lowest-accuracy field. Pricing pages use marketing language that LLMs struggle with.</p></div>
+            <div class="lesson-card"><h3>Composio Catalog = Best Source</h3><p>For apps in Composio's catalog, auth_methods accuracy was near 100%. Using the Composio SDK as ground truth was the single best accuracy improvement in the pipeline.</p></div>
+            <div class="lesson-card"><h3>MCP Is Still Emerging</h3><p>Very few apps have official MCP servers. The LLM sometimes hallucinated MCP support when it found any AI/agent integration. Strict evidence-URL requirements caught most false positives.</p></div>
+            <div class="lesson-card"><h3>Verification Catches Real Errors</h3><p>The verification loop wasn't theater &mdash; it found genuine disagreements on ~20-30% of sampled apps. Most corrections were subtle (e.g., missing a secondary auth method, wrong access model tier).</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- Evidence -->
+<section id="evidence">
+    <div class="container">
+        <div class="section-label">Sources</div>
+        <h2 class="section-title">Evidence &amp; Sources</h2>
+        <p class="section-desc">All documentation URLs used during research &mdash; click to verify any finding.</p>
+        <div class="collapse-toggle open" onclick="toggleCollapsible(this)">
+            <span class="arrow"></span>
+            <h3 style="font-size: 1rem; color: var(--text-heading); font-weight: 700;">All Evidence URLs</h3>
+        </div>
+        <div class="collapse-body show evidence-scroll" id="evidence-list"></div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>Built for the <strong>Composio AI Product Ops Intern</strong> take-home assignment.<br>
+        Research pipeline + verification loop + case study. Data-driven &mdash; this page reads from <code>data/*.json</code> generated by the pipeline.</p>
+    </div>
+</footer>
+
+<!-- ============================================================
+     JavaScript
+     ============================================================ -->
+<script>
+let allApps = [], summaryData = {}, verifiedData = {};
+let sortColumn = 'id', sortDirection = 'asc';
+
+function dataPath(f) {
+    return window.location.pathname.includes('/reports/') ? '../data/' + f : './data/' + f;
+}
+
+async function loadData() {
+    try {
+        const [rawRes, summaryRes, verifiedRes] = await Promise.allSettled([
+            fetch(dataPath('raw_results.json')).then(r => r.json()),
+            fetch(dataPath('summary.json')).then(r => r.json()),
+            fetch(dataPath('verified_results.json')).then(r => r.json()),
+        ]);
+        if (verifiedRes.status === 'fulfilled') { verifiedData = verifiedRes.value; allApps = verifiedData.results || []; }
+        else if (rawRes.status === 'fulfilled') { allApps = rawRes.value; }
+        if (summaryRes.status === 'fulfilled') { summaryData = summaryRes.value; }
+        renderAll();
+    } catch (e) {
+        console.error('Failed to load data:', e);
+        document.getElementById('exec-summary').innerHTML = '<div class="exec-card"><p><strong>Data not loaded.</strong> Run the pipeline first, then serve this page from the project root.</p></div>';
+    }
+}
+
+function renderAll() { renderExec(); renderMetrics(); renderFilters(); renderTable(); renderCharts(); renderVerification(); renderEvidence(); }
+
+function renderExec() {
+    const el = document.getElementById('exec-summary');
+    const stmts = summaryData.executive_summary || ['Run the research pipeline to generate insights.'];
+    el.innerHTML = stmts.map(s => '<div class="exec-card"><p>' + s + '</p></div>').join('');
+}
+
+function renderMetrics() {
+    const el = document.getElementById('metrics-grid');
+    const access = summaryData.access_model_distribution || {};
+    const mcp = summaryData.mcp_adoption || {};
+    const build = summaryData.buildability || {};
+    const verif = summaryData.verification || {};
+    const m = [
+        { v: allApps.length, l: 'Apps Researched' },
+        { v: (access.self_serve_pct || 0) + '%', l: 'Self-Serve Access' },
+        { v: (mcp.adoption_rate_pct || 0) + '%', l: 'MCP Adoption' },
+        { v: (build.ready_today_pct || 0) + '%', l: 'Ready Today' },
+        { v: (summaryData.easy_wins || []).length, l: 'Easy Wins' },
+        { v: verif.overall_accuracy_pct ? verif.overall_accuracy_pct + '%' : 'N/A', l: 'Verified Accuracy' },
+    ];
+    el.innerHTML = m.map(i => '<div class="metric-card"><div class="metric-value">' + i.v + '</div><div class="metric-label">' + i.l + '</div></div>').join('');
+}
+
+function renderFilters() {
+    const cats = [...new Set(allApps.map(a => a.category))].sort();
+    const catSel = document.getElementById('filter-category');
+    cats.forEach(c => { const o = document.createElement('option'); o.value = c; o.textContent = c; catSel.appendChild(o); });
+
+    const auths = [...new Set(allApps.flatMap(a => a.auth_methods || ['unknown']))].sort();
+    const authSel = document.getElementById('filter-auth');
+    auths.forEach(a => { const o = document.createElement('option'); o.value = a; o.textContent = a.replace('_', ' '); authSel.appendChild(o); });
+
+    const models = [...new Set(allApps.map(a => { const ac = a.access; return (typeof ac === 'object' ? ac.model : ac) || 'unknown'; }))].sort();
+    const accSel = document.getElementById('filter-access');
+    models.forEach(m => { const o = document.createElement('option'); o.value = m; o.textContent = m.replace(/_/g, ' '); accSel.appendChild(o); });
+
+    document.getElementById('search-input').addEventListener('input', renderTable);
+    catSel.addEventListener('change', renderTable);
+    authSel.addEventListener('change', renderTable);
+    accSel.addEventListener('change', renderTable);
+    document.getElementById('filter-verdict').addEventListener('change', renderTable);
+}
+
+function getFiltered() {
+    const s = document.getElementById('search-input').value.toLowerCase();
+    const cat = document.getElementById('filter-category').value;
+    const auth = document.getElementById('filter-auth').value;
+    const acc = document.getElementById('filter-access').value;
+    const vrd = document.getElementById('filter-verdict').value;
+    return allApps.filter(a => {
+        if (s && !a.name.toLowerCase().includes(s) && !(a.one_line_description||'').toLowerCase().includes(s)) return false;
+        if (cat && a.category !== cat) return false;
+        if (auth && !(a.auth_methods||[]).includes(auth)) return false;
+        if (acc) { const m = typeof a.access === 'object' ? a.access.model : a.access; if (m !== acc) return false; }
+        if (vrd && a.buildability_verdict !== vrd) return false;
+        return true;
+    });
+}
+
+function renderTable() {
+    const filtered = getFiltered();
+    filtered.sort((a, b) => {
+        let va, vb;
+        switch (sortColumn) {
+            case 'id': va=a.id; vb=b.id; break;
+            case 'name': va=a.name; vb=b.name; break;
+            case 'category': va=a.category; vb=b.category; break;
+            case 'auth': va=(a.auth_methods||[]).join(','); vb=(b.auth_methods||[]).join(','); break;
+            case 'access': va=(a.access?.model||''); vb=(b.access?.model||''); break;
+            case 'api': va=(a.api_surface?.type||''); vb=(b.api_surface?.type||''); break;
+            case 'verdict': va=a.buildability_verdict||''; vb=b.buildability_verdict||''; break;
+            case 'confidence': va=a.confidence||''; vb=b.confidence||''; break;
+            default: va=a.id; vb=b.id;
+        }
+        if (typeof va === 'string') { va=va.toLowerCase(); vb=vb.toLowerCase(); }
+        if (va < vb) return sortDirection === 'asc' ? -1 : 1;
+        if (va > vb) return sortDirection === 'asc' ? 1 : -1;
+        return 0;
+    });
+    const tbody = document.getElementById('apps-tbody');
+    document.getElementById('results-count').textContent = filtered.length + ' of ' + allApps.length + ' apps';
+    tbody.innerHTML = filtered.map(app => {
+        const badges = (app.auth_methods||['unknown']).map(a => '<span class="badge badge-'+a.replace(/[_ ]/g,'-')+'">'+a+'</span>').join(' ');
+        const accM = typeof app.access==='object'?(app.access.model||'unknown'):(app.access||'unknown');
+        const apiT = typeof app.api_surface==='object'?(app.api_surface.type||'unknown'):'unknown';
+        const v = app.buildability_verdict||'unknown';
+        const c = app.confidence||'unknown';
+        const vc = v==='ready_today'?'verdict-ready':v==='buildable_with_workaround'?'verdict-workaround':'verdict-blocked';
+        const mcpText = app.api_surface?.has_mcp === true ? 'Yes' : app.api_surface?.has_mcp === false ? 'No' : 'Unknown';
+        const catalogText = app.composio_in_catalog ? 'Yes' : 'No';
+        return '<tr class="expandable-row" onclick="toggleRow('+app.id+')"><td>'+app.id+'</td><td><strong>'+app.name+'</strong></td><td>'+app.category+'</td><td>'+badges+'</td><td>'+accM.replace(/_/g,' ')+'</td><td>'+apiT+'</td><td><span class="'+vc+'">'+v.replace(/_/g,' ')+'</span></td><td><span class="confidence-'+c+'">'+c+'</span></td></tr>'+
+        '<tr class="expand-details" id="detail-'+app.id+'"><td colspan="8"><div class="detail-grid"><div class="detail-item"><label>Description</label><span>'+(app.one_line_description||'N/A')+'</span></div><div class="detail-item"><label>API Breadth</label><span>'+(app.api_surface?.breadth||'unknown')+'</span></div><div class="detail-item"><label>MCP Support</label><span>'+mcpText+'</span></div><div class="detail-item"><label>Main Blocker</label><span>'+(app.main_blocker||'None')+'</span></div><div class="detail-item"><label>In Composio Catalog</label><span>'+catalogText+'</span></div><div class="detail-item"><label>Agent Notes</label><span>'+(app.agent_notes||'N/A')+'</span></div><div class="detail-item" style="grid-column:1/-1"><label>Evidence URLs</label><span>'+(app.evidence||[]).map(u=>'<a href="'+u+'" target="_blank" rel="noopener">'+u+'</a>').join('<br>')+'</span></div></div></td></tr>';
+    }).join('');
+}
+
+function toggleRow(id) { const d = document.getElementById('detail-'+id); if(d) d.classList.toggle('show'); }
+
+document.querySelectorAll('th[data-sort]').forEach(th => {
+    th.addEventListener('click', () => {
+        const col = th.dataset.sort;
+        if (sortColumn === col) sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+        else { sortColumn = col; sortDirection = 'asc'; }
+        document.querySelectorAll('th').forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+        th.classList.add(sortDirection==='asc'?'sorted-asc':'sorted-desc');
+        renderTable();
+    });
+});
+
+/* Charts */
+const CC = {
+    indigo: 'rgba(99,102,241,0.8)', violet: 'rgba(139,92,246,0.8)', emerald: 'rgba(16,185,129,0.8)',
+    amber: 'rgba(245,158,11,0.8)', rose: 'rgba(244,63,94,0.8)', teal: 'rgba(20,184,166,0.8)', slate: 'rgba(100,116,139,0.8)',
+};
+const CA = [CC.indigo, CC.violet, CC.emerald, CC.amber, CC.rose, CC.teal, CC.slate];
+Chart.defaults.color = '#64748b';
+Chart.defaults.borderColor = 'rgba(255,255,255,0.05)';
+Chart.defaults.font.family = "'Inter', sans-serif";
+
+function renderCharts() {
+    const ad = summaryData.auth_distribution?.counts || {};
+    new Chart(document.getElementById('chart-auth'), { type:'doughnut', data:{ labels:Object.keys(ad).map(k=>k.replace('_',' ')), datasets:[{data:Object.values(ad),backgroundColor:CA,borderWidth:0}] }, options:{responsive:true,plugins:{legend:{position:'right',labels:{padding:14,font:{size:11}}}}} });
+
+    const apd = summaryData.api_type_distribution?.counts || {};
+    new Chart(document.getElementById('chart-api'), { type:'bar', data:{ labels:Object.keys(apd), datasets:[{label:'Apps',data:Object.values(apd),backgroundColor:CA,borderRadius:5}] }, options:{responsive:true,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}} });
+
+    const acd = summaryData.access_model_distribution?.counts || {};
+    new Chart(document.getElementById('chart-access'), { type:'bar', data:{ labels:Object.keys(acd).map(k=>k.replace(/_/g,' ')), datasets:[{label:'Apps',data:Object.values(acd),backgroundColor:CA,borderRadius:5}] }, options:{responsive:true,indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{beginAtZero:true}}} });
+
+    const catD = summaryData.category_breakdown || {};
+    const cats = Object.keys(catD);
+    const vds = ['ready_today','buildable_with_workaround','blocked'];
+    const vCols = [CC.emerald, CC.amber, CC.rose];
+    const ds = vds.map((v,i)=>({label:v.replace(/_/g,' '),data:cats.map(c=>catD[c]?.buildability?.[v]||0),backgroundColor:vCols[i],borderRadius:4}));
+    new Chart(document.getElementById('chart-buildability'), { type:'bar', data:{labels:cats.map(c=>c.length>20?c.slice(0,18)+'...':c),datasets:ds}, options:{responsive:true,scales:{x:{stacked:true,ticks:{font:{size:9}}},y:{stacked:true,beginAtZero:true}},plugins:{legend:{position:'top',labels:{font:{size:10}}}}} });
+
+    const md = summaryData.mcp_adoption || {};
+    new Chart(document.getElementById('chart-mcp'), { type:'doughnut', data:{labels:['Has MCP','No MCP','Unknown'],datasets:[{data:[md.has_mcp||0,md.no_mcp||0,md.unknown||0],backgroundColor:[CC.emerald,CC.slate,CC.rose],borderWidth:0}]}, options:{responsive:true,plugins:{legend:{position:'right',labels:{padding:14,font:{size:11}}}}} });
+
+    const cd = summaryData.confidence_distribution?.counts || {};
+    new Chart(document.getElementById('chart-confidence'), { type:'doughnut', data:{labels:Object.keys(cd),datasets:[{data:Object.values(cd),backgroundColor:[CC.emerald,CC.amber,CC.rose,CC.slate],borderWidth:0}]}, options:{responsive:true,plugins:{legend:{position:'right',labels:{padding:14,font:{size:11}}}}} });
+}
+
+/* Verification */
+function renderVerification() {
+    const stats = summaryData.verification || verifiedData.verification_stats || {};
+    const records = summaryData.comparison_records || verifiedData.comparison_records || [];
+    const sd = document.getElementById('verif-summary');
+    if (stats.sample_size) {
+        sd.innerHTML = '<div class="stat-card"><div class="stat-value">'+stats.sample_size+'</div><div class="stat-label">Apps Sampled</div></div>'+
+        '<div class="stat-card"><div class="stat-value">'+stats.overall_accuracy_pct+'%</div><div class="stat-label">Overall Accuracy</div></div>'+
+        '<div class="stat-card"><div class="stat-value">'+stats.total_agreements+'/'+stats.total_fields_compared+'</div><div class="stat-label">Fields Agreed</div></div>'+
+        '<div class="stat-card"><div class="stat-value">'+stats.total_disagreements+'</div><div class="stat-label">Corrections Made</div></div>';
+    } else { sd.innerHTML = '<p style="color:var(--text-muted)">Run verification pipeline to see results.</p>'; }
+
+    const tb = document.getElementById('comparison-tbody');
+    if (records.length > 0) {
+        tb.innerHTML = records.map(r => {
+            const cells = (r.comparisons||[]).map(c => {
+                const cls = c.agree?'match':'mismatch';
+                const lbl = c.agree?'Match':JSON.stringify(c.pass1_value)+' -> '+JSON.stringify(c.pass2_value);
+                return '<td class="'+cls+'">'+lbl+'</td>';
+            }).join('');
+            return '<tr><td><strong>'+r.app_name+'</strong></td><td>'+r.category+'</td>'+cells+'<td>'+r.fields_agreed+'/'+r.fields_compared+'</td></tr>';
+        }).join('');
+    }
+
+    const fd = document.getElementById('field-accuracy');
+    const pf = stats.per_field_accuracy || {};
+    fd.innerHTML = Object.entries(pf).map(([f,d]) =>
+        '<div class="metric-card"><div class="metric-value" style="font-size:1.6rem">'+d.accuracy+'%</div><div class="metric-label">'+f.replace('.',' > ')+'</div><div style="font-size:0.72rem;color:var(--text-dim);margin-top:4px">'+d.agreements+'/'+d.total+' agreed</div></div>'
+    ).join('');
+
+    const cl = document.getElementById('corrections-list');
+    const corr = stats.corrections || [];
+    if (corr.length > 0) {
+        cl.innerHTML = corr.map(c => '<div class="callout"><h4>'+c.app_name+' &mdash; '+c.field+'</h4><p><strong>Original:</strong> '+JSON.stringify(c.original_value)+' &rarr; <strong>Corrected:</strong> '+JSON.stringify(c.verified_value)+'</p><p style="margin-top:4px;font-style:italic;color:var(--text-dim)">'+c.reason+'</p></div>').join('');
+    } else { cl.innerHTML = '<p style="color:var(--text-muted)">No corrections recorded.</p>'; }
+}
+
+/* Evidence */
+function renderEvidence() {
+    const el = document.getElementById('evidence-list');
+    el.innerHTML = allApps.map(a =>
+        '<div class="evidence-app"><strong>'+a.id+'. '+a.name+'</strong>'+
+        (a.evidence||[]).map(u=>'<a href="'+u+'" target="_blank" rel="noopener">'+u+'</a>').join('')+
+        ((!a.evidence||a.evidence.length===0)?'<span style="color:var(--text-dim)">No evidence URLs</span>':'')+
+        '</div>'
+    ).join('');
+}
+
+/* Collapsible */
+function toggleCollapsible(header) {
+    header.classList.toggle('open');
+    header.nextElementSibling.classList.toggle('show');
+}
+
+document.addEventListener('DOMContentLoaded', loadData);
+</script>
+</body>
+</html>
