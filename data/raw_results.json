@@ -1,0 +1,3409 @@
+[
+  {
+    "id": 1,
+    "name": "Salesforce",
+    "category": "CRM and Sales",
+    "one_line_description": "unknown",
+    "auth_methods": [
+      "unknown"
+    ],
+    "access": {
+      "model": "unknown",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "unknown",
+      "breadth": "unknown",
+      "has_mcp": "unknown",
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "blocked",
+    "main_blocker": "LLM extraction failed after all retries",
+    "confidence": "low",
+    "agent_notes": "Could not research: LLM extraction failed after all retries",
+    "evidence": [
+      "https://salesforce.com",
+      "https://salesforce.com/docs",
+      "https://composio.dev/tools/salesforce"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "salesforce"
+  },
+  {
+    "id": 2,
+    "name": "HubSpot",
+    "category": "CRM and Sales",
+    "one_line_description": "Integration toolkit API for HubSpot.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_trial",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://developers.hubspot.com/docs",
+      "https://developers.hubspot.com/",
+      "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview",
+      "https://composio.dev/tools/hubspot",
+      "https://hubspot.com",
+      "https://developers.hubspot.com/docs/api-reference/latest/overview",
+      "https://www.hubspot.com/products/crm",
+      "https://developers.hubspot.com/docs/apps/legacy-apps/authentication/intro-to-auth"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "hubspot"
+  },
+  {
+    "id": 3,
+    "name": "Pipedrive",
+    "category": "CRM and Sales",
+    "one_line_description": "Integration toolkit API for Pipedrive.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://pipedrive.com",
+      "https://developers.pipedrive.com/",
+      "https://support.pipedrive.com/en/article/how-can-i-find-my-personal-api-key",
+      "https://pipedrive.com/developers",
+      "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+      "https://developers.pipedrive.com/docs/api/v1",
+      "https://composio.dev/tools/pipedrive",
+      "https://developers.pipedrive.com/docs/api/v1/Oauth",
+      "https://pipedrive.com/api"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "pipedrive"
+  },
+  {
+    "id": 4,
+    "name": "Attio",
+    "category": "CRM and Sales",
+    "one_line_description": "Integration toolkit API for Attio.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": {
+      "model": "self_serve_trial",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://attio.com",
+      "https://attio.com/developers",
+      "https://composio.dev/tools/attio",
+      "https://attio.com/pricing",
+      "https://attio.com/docs",
+      "https://docs.attio.com/rest-api/overview",
+      "https://docs.attio.com/docs/overview",
+      "https://attio.com/api",
+      "https://docs.attio.com/rest-api/tutorials/connect-an-app-through-oauth",
+      "https://docs.attio.com/rest-api/guides/authentication",
+      "https://docs.attio.com/sdk/server/attio-api-token"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "attio"
+  },
+  {
+    "id": 5,
+    "name": "Twenty",
+    "category": "CRM and Sales",
+    "one_line_description": "Integration toolkit API for Twenty.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_trial",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest+graphql",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://twenty.com",
+      "https://twenty.com/pricing",
+      "https://developers.google.com/identity/protocols/oauth2",
+      "https://docs.twenty.com/developers/extend/api",
+      "https://oauth.net/2/",
+      "https://github.com/twentyhq/twenty/issues/10283",
+      "https://twenty.com/developers"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 6,
+    "name": "Podio",
+    "category": "CRM and Sales",
+    "one_line_description": "Integration toolkit API for Podio.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "admin_approval",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://podio.com/docs",
+      "https://developers.podio.com/authentication",
+      "https://developers.podio.com/",
+      "https://developers.podio.com/authentication/server_side",
+      "https://podio.com",
+      "https://podio.com/docs/authentication",
+      "https://developers.podio.com/index/faq",
+      "https://docs.sharefile.com/en-us/podio/using-podio/podio-and-other-services/podio-api.html",
+      "https://www.progress.com/podio/pricing",
+      "https://composio.dev/tools/procfu",
+      "https://podio.com/docs/api",
+      "https://developers.podio.com/authentication/app_auth",
+      "https://podio.com/api",
+      "https://podio.com/developers"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "procfu"
+  },
+  {
+    "id": 7,
+    "name": "Zoho CRM",
+    "category": "CRM and Sales",
+    "one_line_description": "Integration toolkit API for Zoho CRM.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "paid_plan_required",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest+graphql",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://composio.dev/tools/zoho",
+      "https://www.zoho.com/crm/developer/docs/api/v8/",
+      "https://zoho.com/docs",
+      "https://www.zoho.com/crm/zohocrm-pricing.html",
+      "https://zoho.com/crm",
+      "https://www.zoho.com/accounts/protocol/oauth.html",
+      "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+      "https://www.zoho.com/crm/developer/docs/",
+      "https://help.zoho.com/portal/en/community/topic/setting-up-the-api-key"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "zoho"
+  },
+  {
+    "id": 8,
+    "name": "Close",
+    "category": "CRM and Sales",
+    "one_line_description": "Integration toolkit API for Close.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic",
+      "token"
+    ],
+    "access": {
+      "model": "partner_gated",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "blocked",
+    "main_blocker": "Requires partnership agreement or contact sales.",
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://composio.dev/tools/close",
+      "https://developer.close.com/",
+      "https://developer.close.com/api/overview/oauth-authentication",
+      "https://close.com/api",
+      "https://close.com",
+      "https://auth0.com/blog/why-migrate-from-api-keys-to-oauth2-access-tokens/",
+      "https://help.close.com/docs/api-keys-oauth",
+      "https://developer.close.com/api/overview"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "close"
+  },
+  {
+    "id": 9,
+    "name": "Copper",
+    "category": "CRM and Sales",
+    "one_line_description": "Integration toolkit API for Copper.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://developer.copper.co/guides/introduction",
+      "https://copper.com/developers",
+      "https://developer.copper.com/introduction/oauth/flow.html",
+      "https://copper.com/docs",
+      "https://www.copper.com/pricing",
+      "https://developer.copper.com/introduction/oauth/index.html",
+      "https://copper.com/api",
+      "https://support.ipaas.com/en/articles/13311335-copper-crm-installation-instructions",
+      "https://copper.com",
+      "https://developer.copper.com/introduction/authentication.html",
+      "https://developer.copper.com/"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 10,
+    "name": "DealCloud",
+    "category": "CRM and Sales",
+    "one_line_description": "Integration toolkit API for DealCloud.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://api.docs.dealcloud.com/docs/token",
+      "https://api.docs.dealcloud.com/sdk/python/authentication",
+      "https://developers.anduintransact.com/docs/step-1-retrieve-credentials-of-3rd-party-apps-7",
+      "https://api.docs.dealcloud.com",
+      "https://www.intapp.com/dealcloud/",
+      "https://api.docs.dealcloud.com/docs",
+      "https://api.docs.dealcloud.com/",
+      "https://api.docs.dealcloud.com/sdk/csharp/authentication"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 11,
+    "name": "Zendesk",
+    "category": "Support and Helpdesk",
+    "one_line_description": "Integration toolkit API for Zendesk.",
+    "auth_methods": [
+      "api_key",
+      "basic",
+      "token"
+    ],
+    "access": {
+      "model": "paid_plan_required",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://zendesk.com",
+      "https://zendesk.com/developers",
+      "https://zendesk.com/api",
+      "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+      "https://developer.zendesk.com/documentation/conversations/getting-started/api-authentication/",
+      "https://support.zendesk.com/hc/en-us/articles/4408831452954-How-can-I-authenticate-API-requests",
+      "https://composio.dev/tools/zendesk"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "zendesk"
+  },
+  {
+    "id": 12,
+    "name": "Intercom",
+    "category": "Support and Helpdesk",
+    "one_line_description": "Integration toolkit API for Intercom.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": {
+      "model": "self_serve_trial",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://intercom.com",
+      "https://intercom.com/developers",
+      "https://intercom.com/api",
+      "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+      "https://developers.intercom.com/docs/references/rest-api/api.intercom.io",
+      "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/setting-up-oauth",
+      "https://composio.dev/tools/intercom"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "intercom"
+  },
+  {
+    "id": 13,
+    "name": "Freshdesk",
+    "category": "Support and Helpdesk",
+    "one_line_description": "Integration toolkit API for Freshdesk.",
+    "auth_methods": [
+      "api_key",
+      "basic"
+    ],
+    "access": {
+      "model": "paid_plan_required",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://freshdesk.com",
+      "https://developers.freshdesk.com/",
+      "https://developers.freshdesk.com/api/",
+      "https://community.freshworks.dev/t/how-to-use-oauth-authentication-mechanism-for-freshdesk-api/1691",
+      "https://composio.dev/tools/freshdesk"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "freshdesk"
+  },
+  {
+    "id": 14,
+    "name": "Front",
+    "category": "Support and Helpdesk",
+    "one_line_description": "Integration toolkit API for Front.",
+    "auth_methods": [
+      "oauth2",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_trial",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://front.com",
+      "https://front.com/api",
+      "https://dev.frontapp.com/docs/authentication",
+      "https://dev.frontapp.com/reference/introduction",
+      "https://dev.frontapp.com/docs/welcome",
+      "https://composio.dev/tools/front"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "front"
+  },
+  {
+    "id": 15,
+    "name": "Pylon",
+    "category": "Support and Helpdesk",
+    "one_line_description": "Integration toolkit API for Pylon.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": {
+      "model": "self_serve_trial",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest+graphql",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://usepylon.com",
+      "https://docs.usepylon.com/pylon-docs/developer/api",
+      "https://pylon.cronit.io/docs/core-concepts/built-in-authentication-and-authorization",
+      "https://getpylon.com/developers/",
+      "https://composio.dev/tools/pylon_mcp"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "pylon_mcp"
+  },
+  {
+    "id": 16,
+    "name": "LiveAgent",
+    "category": "Support and Helpdesk",
+    "one_line_description": "Integration toolkit API for LiveAgent.",
+    "auth_methods": [
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "paid_plan_required",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://liveagent.com",
+      "https://support.liveagent.com/840770-Complete-API-reference",
+      "https://support.liveagent.com/066804-LiveAgent-API",
+      "https://docs.cognigy.com/live-agent/api"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 17,
+    "name": "Plain",
+    "category": "Support and Helpdesk",
+    "one_line_description": "Integration toolkit API for Plain.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic",
+      "token"
+    ],
+    "access": {
+      "model": "admin_approval",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest+graphql",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://plain.com",
+      "https://plain.com/docs",
+      "https://www.plain.com/docs/graphql/authentication",
+      "https://docs.plainid.io/apidocs/authentication-mgmt-apis",
+      "https://idratherbewriting.com/learnapidoc/docapis_more_about_authorization.html",
+      "https://composio.dev/tools/plain"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "plain"
+  },
+  {
+    "id": 18,
+    "name": "Help Scout",
+    "category": "Support and Helpdesk",
+    "one_line_description": "Integration toolkit API for Help Scout.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic",
+      "token"
+    ],
+    "access": {
+      "model": "admin_approval",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://helpscout.com",
+      "https://helpscout.com/docs",
+      "https://developer.helpscout.com/docs-api/",
+      "https://developer.helpscout.com/mailbox-api/",
+      "https://developer.helpscout.com/mailbox-api/overview/authentication",
+      "https://composio.dev/tools/help_scout"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "help_scout"
+  },
+  {
+    "id": 19,
+    "name": "Gorgias",
+    "category": "Support and Helpdesk",
+    "one_line_description": "Integration toolkit API for Gorgias.",
+    "auth_methods": [
+      "api_key",
+      "basic",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://gorgias.com",
+      "https://docs.gorgias.com/en-US/rest-api-208286",
+      "https://developers.gorgias.com/",
+      "https://mindcloud.co/docs/universal/rest/gorgias/latest/introduction/authentication",
+      "https://composio.dev/tools/gorgias"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "gorgias"
+  },
+  {
+    "id": 20,
+    "name": "Gladly",
+    "category": "Support and Helpdesk",
+    "one_line_description": "Integration toolkit API for Gladly.",
+    "auth_methods": [
+      "basic",
+      "token",
+      "api_key"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://gladly.com",
+      "https://developer.gladly.com/",
+      "https://help.maestroqa.com/en/articles/5546875-gladly-integration",
+      "https://github.com/gladly/rest-api-examples",
+      "https://composio.dev/tools/gladia"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "gladia"
+  },
+  {
+    "id": 21,
+    "name": "Slack",
+    "category": "Communications and Messaging",
+    "one_line_description": "Integration toolkit API for Slack.",
+    "auth_methods": [
+      "oauth2",
+      "token"
+    ],
+    "access": {
+      "model": "partner_gated",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "blocked",
+    "main_blocker": "Requires partnership agreement or contact sales.",
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://slack.com",
+      "https://slack.com/developers",
+      "https://slack.com/api",
+      "https://docs.slack.dev/authentication/",
+      "https://api.slack.com/authentication/basics",
+      "https://docs.slack.dev/apis/web-api/",
+      "https://composio.dev/tools/slack"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "slack"
+  },
+  {
+    "id": 22,
+    "name": "Twilio",
+    "category": "Communications and Messaging",
+    "one_line_description": "Integration toolkit API for Twilio.",
+    "auth_methods": [
+      "api_key",
+      "basic",
+      "token"
+    ],
+    "access": {
+      "model": "paid_plan_required",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://twilio.com",
+      "https://twilio.com/docs",
+      "https://twilio.com/docs/api",
+      "https://twilio.com/developers",
+      "https://twilio.com/api",
+      "https://www.twilio.com/docs/iam/credentials/api",
+      "https://www.twilio.com/docs/iam/api",
+      "https://www.twilio.com/docs/verify/api",
+      "https://composio.dev/tools/segment"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "segment"
+  },
+  {
+    "id": 23,
+    "name": "Zoho Cliq",
+    "category": "Communications and Messaging",
+    "one_line_description": "Integration toolkit API for Zoho Cliq.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "paid_plan_required",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://zoho.com/cliq",
+      "https://zoho.com/docs",
+      "https://www.zoho.com/cliq/help/restapi/v3/introduction/",
+      "https://mindcloud.co/docs/universal/rest/zoho-cliq/latest/introduction/authentication",
+      "https://www.zoho.com/cliq/help/restapi/v3/oauth/"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 24,
+    "name": "Lark",
+    "category": "Communications and Messaging",
+    "one_line_description": "Integration toolkit API for Lark.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "narrow",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://open.larksuite.com",
+      "https://open.larksuite.com/docs",
+      "https://open.larksuite.com/docs/api",
+      "https://open.larksuite.com/developers",
+      "https://open.larksuite.com/api",
+      "https://open.larksuite.com/docs/authentication",
+      "https://open.larksuite.com/document/ukTMukTMukTM/uMTNz4yM1MjLzUzM",
+      "https://open.larksuite.com/document/home/introduction-to-scope-and-authorization/overview",
+      "https://open.larksuite.com/"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 25,
+    "name": "Pumble",
+    "category": "Communications and Messaging",
+    "one_line_description": "Integration toolkit API for Pumble.",
+    "auth_methods": [
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://pumble.com",
+      "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+      "https://pumble-api-keys.addons.marketplace.cake.com/api-docs/",
+      "https://mindcloud.co/docs/universal/rest/pumble/latest/introduction/authentication"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 26,
+    "name": "Discord",
+    "category": "Communications and Messaging",
+    "one_line_description": "Integration toolkit API for Discord.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://discord.com",
+      "https://discord.com/developers",
+      "https://docs.discord.com/developers/topics/oauth2",
+      "https://github.com/discord/discord-api-docs",
+      "https://docs.discord.food/reference",
+      "https://composio.dev/tools/discord"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "discord"
+  },
+  {
+    "id": 27,
+    "name": "Telegram",
+    "category": "Communications and Messaging",
+    "one_line_description": "Integration toolkit API for Telegram.",
+    "auth_methods": [
+      "oauth2",
+      "basic",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://core.telegram.org",
+      "https://core.telegram.org/docs",
+      "https://core.telegram.org/docs/api",
+      "https://core.telegram.org/developers",
+      "https://core.telegram.org/api",
+      "https://core.telegram.org/docs/authentication",
+      "https://core.telegram.org/api/auth",
+      "https://core.telegram.org/",
+      "https://core.telegram.org/widgets/login",
+      "https://composio.dev/tools/telegram"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "telegram"
+  },
+  {
+    "id": 28,
+    "name": "WhatsApp Business",
+    "category": "Communications and Messaging",
+    "one_line_description": "Integration toolkit API for WhatsApp Business.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://developers.facebook.com/docs/whatsapp",
+      "https://developers.facebook.com/docs",
+      "https://developers.facebook.com/docs/authentication",
+      "https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started",
+      "https://whatsappbusiness.com/developers/developer-hub/",
+      "https://www.reddit.com/r/WhatsappBusinessAPI/comments/1logu39/step_by_step_guide_for_getting_started_with_the/",
+      "https://composio.dev/tools/whatsapp"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "whatsapp"
+  },
+  {
+    "id": 29,
+    "name": "Aircall",
+    "category": "Communications and Messaging",
+    "one_line_description": "Integration toolkit API for Aircall.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://aircall.io",
+      "https://developer.aircall.io/api-references",
+      "https://developer.aircall.io/tutorials/basic-authentication/",
+      "https://developer.aircall.io/tutorials/how-aircall-oauth-flow-works"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 30,
+    "name": "Vonage",
+    "category": "Communications and Messaging",
+    "one_line_description": "Integration toolkit API for Vonage.",
+    "auth_methods": [
+      "api_key",
+      "basic",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://developer.vonage.com/en/getting-started/concepts/authentication",
+      "https://developer.vonage.com/en/verify/concepts/authentication",
+      "https://developer.vonage.com/en/home"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 31,
+    "name": "Google Ads",
+    "category": "Marketing, Ads, Email and Social",
+    "one_line_description": "Integration toolkit API for Google Ads.",
+    "auth_methods": [
+      "oauth2",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://developers.google.com/google-ads",
+      "https://developers.google.com/docs",
+      "https://developers.google.com/docs/api",
+      "https://developers.google.com/docs/authentication",
+      "https://developers.google.com/google-ads/api/docs/oauth/overview",
+      "https://developers.google.com/google-ads/api/docs/reach-forecasting/authentication",
+      "https://groups.google.com/g/adwords-api/c/E1Of6-B7cBo",
+      "https://composio.dev/tools/googleads"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "googleads"
+  },
+  {
+    "id": 32,
+    "name": "Meta Ads",
+    "category": "Marketing, Ads, Email and Social",
+    "one_line_description": "Integration toolkit API for Meta Ads.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://developers.facebook.com/docs/marketing-apis",
+      "https://developers.facebook.com/docs",
+      "https://developers.facebook.com/docs/authentication",
+      "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authentication",
+      "https://developers.facebook.com/documentation/ads-commerce/marketing-api",
+      "https://www.reddit.com/r/n8n/comments/1pwh97p/facebook_account_connection_to_access_ads_data/",
+      "https://composio.dev/tools/metaads"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "metaads"
+  },
+  {
+    "id": 33,
+    "name": "LinkedIn Ads",
+    "category": "Marketing, Ads, Email and Social",
+    "one_line_description": "Integration toolkit API for LinkedIn Ads.",
+    "auth_methods": [
+      "oauth2",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://learn.microsoft.com/linkedin/marketing",
+      "https://learn.microsoft.com/docs",
+      "https://developer.linkedin.com/product-catalog/marketing/advertising-api",
+      "https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access",
+      "https://www.stitchflow.com/user-management/linkedin-ads/api",
+      "https://composio.dev/tools/linkedin"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "linkedin"
+  },
+  {
+    "id": 34,
+    "name": "GoHighLevel",
+    "category": "Marketing, Ads, Email and Social",
+    "one_line_description": "Integration toolkit API for GoHighLevel.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://highlevel.stoplight.io",
+      "https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api-documentation",
+      "https://marketplace.gohighlevel.com/docs/",
+      "https://developers.gohighlevel.com/"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 35,
+    "name": "Mailchimp",
+    "category": "Marketing, Ads, Email and Social",
+    "one_line_description": "Integration toolkit API for Mailchimp.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest+graphql",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://mailchimp.com/developer",
+      "https://mailchimp.com/api",
+      "https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/",
+      "https://mailchimp.com/developer/marketing/docs/fundamentals/",
+      "https://mailchimp.com/help/about-api-keys/",
+      "https://composio.dev/tools/mailchimp"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "mailchimp"
+  },
+  {
+    "id": 36,
+    "name": "Klaviyo",
+    "category": "Marketing, Ads, Email and Social",
+    "one_line_description": "Integration toolkit API for Klaviyo.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://developers.klaviyo.com",
+      "https://developers.klaviyo.com/docs",
+      "https://developers.klaviyo.com/docs/api",
+      "https://developers.klaviyo.com/developers",
+      "https://developers.klaviyo.com/api",
+      "https://developers.klaviyo.com/docs/authentication",
+      "https://developers.klaviyo.com/en/docs/authenticate_",
+      "https://developers.klaviyo.com/en/reference/api_overview",
+      "https://developers.klaviyo.com/en/docs/set_up_oauth",
+      "https://composio.dev/tools/klaviyo"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "klaviyo"
+  },
+  {
+    "id": 37,
+    "name": "systeme.io",
+    "category": "Marketing, Ads, Email and Social",
+    "one_line_description": "Integration toolkit API for systeme.io.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "moderate",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://systeme.io",
+      "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+      "https://help.systeme.io/article/2329-how-to-use-systeme-io-public-api",
+      "https://composio.dev/tools/promptmate_io"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "promptmate_io"
+  },
+  {
+    "id": 38,
+    "name": "Pinterest",
+    "category": "Marketing, Ads, Email and Social",
+    "one_line_description": "Integration toolkit API for Pinterest.",
+    "auth_methods": [
+      "oauth2",
+      "basic",
+      "token"
+    ],
+    "access": {
+      "model": "partner_gated",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "blocked",
+    "main_blocker": "Requires partnership agreement or contact sales.",
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://developers.pinterest.com",
+      "https://developers.pinterest.com/docs",
+      "https://developers.pinterest.com/docs/api",
+      "https://developers.pinterest.com/developers",
+      "https://developers.pinterest.com/api",
+      "https://developers.pinterest.com/docs/authentication",
+      "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
+      "https://developers.pinterest.com/docs/api/v5/",
+      "https://developers.pinterest.com/docs/api/v5/oauth-token/"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 39,
+    "name": "Threads",
+    "category": "Marketing, Ads, Email and Social",
+    "one_line_description": "Integration toolkit API for Threads.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://developers.facebook.com/docs/threads",
+      "https://developers.facebook.com/docs",
+      "https://developers.facebook.com/docs/authentication",
+      "https://developers.facebook.com/documentation/threads/get-started",
+      "https://developers.facebook.com/documentation/threads",
+      "https://www.postman.com/meta/threads/documentation/dht3nzz/threads-api",
+      "https://composio.dev/tools/slackbot"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "slackbot"
+  },
+  {
+    "id": 40,
+    "name": "SendGrid",
+    "category": "Marketing, Ads, Email and Social",
+    "one_line_description": "Integration toolkit API for SendGrid.",
+    "auth_methods": [
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "paid_plan_required",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://sendgrid.com",
+      "https://sendgrid.com/docs",
+      "https://sendgrid.com/docs/api",
+      "https://sendgrid.com/developers",
+      "https://sendgrid.com/api",
+      "https://www.twilio.com/docs/sendgrid/api-reference/domain-authentication/authenticate-a-domain",
+      "https://www.twilio.com/en-us/products/email-api/explore-ai",
+      "https://composio.dev/tools/sendgrid"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "sendgrid"
+  },
+  {
+    "id": 41,
+    "name": "Shopify",
+    "category": "Ecommerce",
+    "one_line_description": "Integration toolkit API for Shopify.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest+graphql",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://shopify.dev",
+      "https://shopify.dev/docs",
+      "https://shopify.dev/docs/api",
+      "https://shopify.dev/api",
+      "https://shopify.dev/docs/api/usage/authentication",
+      "https://shopify.dev/docs/apps/build/authentication-authorization",
+      "https://shopify.dev/docs/api/admin-rest",
+      "https://composio.dev/tools/shopify"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "shopify"
+  },
+  {
+    "id": 42,
+    "name": "WooCommerce",
+    "category": "Ecommerce",
+    "one_line_description": "Integration toolkit API for WooCommerce.",
+    "auth_methods": [
+      "api_key",
+      "basic"
+    ],
+    "access": {
+      "model": "admin_approval",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest+graphql",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://woocommerce.com/document/woocommerce-rest-api",
+      "https://woocommerce.com/docs",
+      "https://woocommerce.com/developers",
+      "https://woocommerce.com/api",
+      "https://woocommerce.com/document/woocommerce-rest-api/",
+      "https://developer.woocommerce.com/docs/apis/rest-api/",
+      "https://www.youtube.com/watch?v=FGqydIm4tN8"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 43,
+    "name": "BigCommerce",
+    "category": "Ecommerce",
+    "one_line_description": "Integration toolkit API for BigCommerce.",
+    "auth_methods": [
+      "basic",
+      "token"
+    ],
+    "access": {
+      "model": "admin_approval",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest+graphql",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://developer.bigcommerce.com",
+      "https://developer.bigcommerce.com/docs",
+      "https://developer.bigcommerce.com/docs/api",
+      "https://developer.bigcommerce.com/api",
+      "https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts",
+      "https://docs.bigcommerce.com/",
+      "https://docs.bigcommerce.com/developer/api-reference/about-our-apis"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 44,
+    "name": "Salesforce Commerce Cloud",
+    "category": "Ecommerce",
+    "one_line_description": "Integration toolkit API for Salesforce Commerce Cloud.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "narrow",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://composio.dev/tools/salesforce"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "salesforce"
+  },
+  {
+    "id": 45,
+    "name": "Magento",
+    "category": "Ecommerce",
+    "one_line_description": "Integration toolkit API for Magento.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": {
+      "model": "admin_approval",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://developer.adobe.com/commerce",
+      "https://developer.adobe.com/commerce/webapi/get-started/authentication/",
+      "https://www.mageplaza.com/devdocs/token-oauth-session-authentication-magento-2.html"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 46,
+    "name": "Squarespace",
+    "category": "Ecommerce",
+    "one_line_description": "Integration toolkit API for Squarespace.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://developers.squarespace.com",
+      "https://developers.squarespace.com/commerce-apis/overview",
+      "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+      "https://support.squarespace.com/hc/en-us/articles/236297987-Squarespace-API-keys"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 47,
+    "name": "Ecwid",
+    "category": "Ecommerce",
+    "one_line_description": "Integration toolkit API for Ecwid.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://api-docs.ecwid.com",
+      "https://api-docs.ecwid.com/docs",
+      "https://api-docs.ecwid.com/docs/api",
+      "https://api-docs.ecwid.com/developers",
+      "https://api-docs.ecwid.com/api",
+      "https://api-docs.ecwid.com/docs/authentication",
+      "https://docs.ecwid.com/get-started/make-your-first-api-request",
+      "https://docs.ecwid.com/api-reference",
+      "https://docs.ecwid.com/get-started/api-glossary"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 48,
+    "name": "Gumroad",
+    "category": "Ecommerce",
+    "one_line_description": "Integration toolkit API for Gumroad.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "narrow",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://gumroad.com/api",
+      "https://gumroad.com/docs",
+      "https://gumroad.com/developers",
+      "https://developers.gumroad.com",
+      "https://app.gumroad.com/api",
+      "https://gumroad.com/help/article/280-create-application-api",
+      "https://www.youtube.com/watch?v=F34PFNPP_yg",
+      "https://composio.dev/tools/gumroad"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "gumroad"
+  },
+  {
+    "id": 49,
+    "name": "Amazon Selling Partner",
+    "category": "Ecommerce",
+    "one_line_description": "Integration toolkit API for Amazon Selling Partner.",
+    "auth_methods": [
+      "oauth2",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://developer-docs.amazon.com/sp-api",
+      "https://developer-docs.amazon.com/docs",
+      "https://developer-docs.amazon.com/docs/api",
+      "https://developer-docs.amazon.com/developers",
+      "https://developer-docs.amazon.com/api",
+      "https://developer-docs.amazon.com/docs/authentication",
+      "https://developer-docs.amazon/sp-api/docs/connecting-to-the-selling-partner-api",
+      "https://developer.amazonservices.com/getting-started-guide",
+      "https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-gen-ai-selling-partner-api/integrating-sp-api.html"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 50,
+    "name": "fanbasis",
+    "category": "Ecommerce",
+    "one_line_description": "Integration toolkit API for fanbasis.",
+    "auth_methods": [
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_trial",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://fanbasis.com",
+      "https://dev-docs.fanbasis.com/",
+      "https://apidocs.fan/",
+      "https://zapier.com/apps/fanbasis/integrations"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 51,
+    "name": "DataForSEO",
+    "category": "Data, SEO and Scraping",
+    "one_line_description": "Integration toolkit API for DataForSEO.",
+    "auth_methods": [
+      "basic",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://docs.dataforseo.com",
+      "https://docs.dataforseo.com/v3/auth/",
+      "https://docs.dataforseo.com/v3/",
+      "https://dataforseo.com/",
+      "https://composio.dev/tools/dataforseo"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "dataforseo"
+  },
+  {
+    "id": 52,
+    "name": "SE Ranking",
+    "category": "Data, SEO and Scraping",
+    "one_line_description": "Integration toolkit API for SE Ranking.",
+    "auth_methods": [
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_trial",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://seranking.com/api/project/",
+      "https://seranking.com/api/data/getting-started/",
+      "https://seranking.com/api.html",
+      "https://composio.dev/tools/ahrefs"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "ahrefs"
+  },
+  {
+    "id": 53,
+    "name": "Ahrefs",
+    "category": "Data, SEO and Scraping",
+    "one_line_description": "Integration toolkit API for Ahrefs.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "paid_plan_required",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://ahrefs.com/api",
+      "https://docs.ahrefs.com/",
+      "https://docs.ahrefs.com/en/api/docs/api-keys-creation-and-management",
+      "https://github.com/ahrefs/ahrefs-api-skills",
+      "https://composio.dev/tools/ahrefs"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "ahrefs"
+  },
+  {
+    "id": 54,
+    "name": "MrScraper",
+    "category": "Data, SEO and Scraping",
+    "one_line_description": "Integration toolkit API for MrScraper.",
+    "auth_methods": [
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://docs.mrscraper.com",
+      "https://docs.mrscraper.com/docs/api/authentication",
+      "https://docs.mrscraper.com/docs/getting-started/overview",
+      "https://livescraper.com/api-doc"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 55,
+    "name": "Apify",
+    "category": "Data, SEO and Scraping",
+    "one_line_description": "Integration toolkit API for Apify.",
+    "auth_methods": [
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://docs.apify.com",
+      "https://docs.apify.com/api",
+      "https://docs.apify.com/platform/integrations/api",
+      "https://docs.apify.com/",
+      "https://docs.apify.com/api/v2/getting-started",
+      "https://composio.dev/tools/apify"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "apify"
+  },
+  {
+    "id": 56,
+    "name": "Firecrawl",
+    "category": "Data, SEO and Scraping",
+    "one_line_description": "Integration toolkit API for Firecrawl.",
+    "auth_methods": [
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "none_public",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "blocked",
+    "main_blocker": "No public developer API available.",
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://firecrawl.dev",
+      "https://firecrawl.dev/docs",
+      "https://docs.firecrawl.dev/api-reference/v2-introduction",
+      "https://www.firecrawl.dev/",
+      "https://github.com/firecrawl/firecrawl/issues/1093",
+      "https://composio.dev/tools/firecrawl"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "firecrawl"
+  },
+  {
+    "id": 57,
+    "name": "Bright Data",
+    "category": "Data, SEO and Scraping",
+    "one_line_description": "Integration toolkit API for Bright Data.",
+    "auth_methods": [
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "admin_approval",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://brightdata.com",
+      "https://docs.brightdata.com/api-reference/authentication",
+      "https://docs.brightdata.com/datasets/scraper-studio/quickstart",
+      "https://docs.brightdata.com/introduction",
+      "https://composio.dev/tools/brightdata"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "brightdata"
+  },
+  {
+    "id": 58,
+    "name": "Sherlock",
+    "category": "Data, SEO and Scraping",
+    "one_line_description": "Integration toolkit API for Sherlock.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "none_public",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "blocked",
+    "main_blocker": "No public developer API available.",
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://github.com/sherlock-project/sherlock",
+      "https://github.com/docs",
+      "https://github.com/developers",
+      "https://apify.com/misceres/sherlock/api",
+      "https://www.perceptiviti.com/sherlockApis/",
+      "https://www.postman.com/sherlock-endpoints/sherlock-api-public/overview"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 59,
+    "name": "Waterfall.io",
+    "category": "Data, SEO and Scraping",
+    "one_line_description": "Integration toolkit API for Waterfall.io.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://waterfall.io",
+      "https://docs.waterfall.io/v1/authentication",
+      "https://docs.waterfall.io/v1/introduction",
+      "https://www.waterfall.io/"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 60,
+    "name": "Clay",
+    "category": "Data, SEO and Scraping",
+    "one_line_description": "Integration toolkit API for Clay.",
+    "auth_methods": [
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_trial",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://clay.com",
+      "https://clay.com/docs",
+      "https://university.clay.com/docs/http-api-integration-overview",
+      "https://university.clay.com/docs/http-api-with-jwt-authentication-integration-overview",
+      "https://www.octavehq.com/post/clay-http-api-integration-connecting-data-sources-5e770"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 61,
+    "name": "GitHub",
+    "category": "Developer, Infra and Data platforms",
+    "one_line_description": "Integration toolkit API for GitHub.",
+    "auth_methods": [
+      "basic",
+      "token"
+    ],
+    "access": {
+      "model": "admin_approval",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://docs.github.com/rest",
+      "https://docs.github.com/developers",
+      "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+      "https://docs.github.com/en/authentication",
+      "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens",
+      "https://composio.dev/tools/github"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "github"
+  },
+  {
+    "id": 62,
+    "name": "Vercel",
+    "category": "Developer, Infra and Data platforms",
+    "one_line_description": "Integration toolkit API for Vercel.",
+    "auth_methods": [
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "partner_gated",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "blocked",
+    "main_blocker": "Requires partnership agreement or contact sales.",
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://vercel.com/docs/rest-api",
+      "https://vercel.com/docs",
+      "https://vercel.com/docs/api",
+      "https://vercel.com/developers",
+      "https://vercel.com/api",
+      "https://vercel.com/docs/ai-gateway/authentication-and-byok",
+      "https://vercel.com/docs/deployment-protection/methods-to-protect-deployments/vercel-authentication",
+      "https://composio.dev/tools/vercel"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "vercel"
+  },
+  {
+    "id": 63,
+    "name": "Netlify",
+    "category": "Developer, Infra and Data platforms",
+    "one_line_description": "Integration toolkit API for Netlify.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest+graphql",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://docs.netlify.com/api",
+      "https://docs.netlify.com/docs",
+      "https://docs.netlify.com/docs/api",
+      "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+      "https://docs.netlify.com/api-and-cli-guides/cli-guides/get-started-with-cli/",
+      "https://answers.netlify.com/t/what-is-netlify-api-authentication-in-netlify-labs/47481"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 64,
+    "name": "Cloudflare",
+    "category": "Developer, Infra and Data platforms",
+    "one_line_description": "Integration toolkit API for Cloudflare.",
+    "auth_methods": [
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest+graphql",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://developers.cloudflare.com/api",
+      "https://developers.cloudflare.com/docs",
+      "https://developers.cloudflare.com/analytics/graphql-api/getting-started/authentication/api-key-auth/",
+      "https://developers.cloudflare.com/api/",
+      "https://developers.cloudflare.com/fundamentals/api/get-started/create-token/",
+      "https://composio.dev/tools/cloudflare"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "cloudflare"
+  },
+  {
+    "id": 65,
+    "name": "Supabase",
+    "category": "Developer, Infra and Data platforms",
+    "one_line_description": "Integration toolkit API for Supabase.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest+graphql",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://supabase.com/docs",
+      "https://supabase.com/docs/guides/auth",
+      "https://supabase.com/docs/guides/api",
+      "https://www.reddit.com/r/Supabase/comments/13s5g53/is_there_complete_documentation_of_the_auth_rest/",
+      "https://composio.dev/tools/supabase"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "supabase"
+  },
+  {
+    "id": 66,
+    "name": "Neo4j",
+    "category": "Developer, Infra and Data platforms",
+    "one_line_description": "Integration toolkit API for Neo4j.",
+    "auth_methods": [
+      "basic",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://neo4j.com/docs",
+      "https://neo4j.com/api",
+      "https://neo4j.com/docs/http-api/current/authentication-authorization/",
+      "https://neo4j.com/docs/query-api/current/authentication-authorization/",
+      "https://neo4j.com/docs/java-reference/current/extending-neo4j/security-plugins/",
+      "https://composio.dev/tools/neo4j"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "neo4j"
+  },
+  {
+    "id": 67,
+    "name": "Snowflake",
+    "category": "Developer, Infra and Data platforms",
+    "one_line_description": "Integration toolkit API for Snowflake.",
+    "auth_methods": [
+      "oauth2",
+      "basic",
+      "token"
+    ],
+    "access": {
+      "model": "admin_approval",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://docs.snowflake.com",
+      "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication",
+      "https://docs.snowflake.com/en/user-guide/api-authentication",
+      "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+      "https://composio.dev/tools/snowflake"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "snowflake"
+  },
+  {
+    "id": 68,
+    "name": "MongoDB Atlas",
+    "category": "Developer, Infra and Data platforms",
+    "one_line_description": "Integration toolkit API for MongoDB Atlas.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest+graphql",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://mongodb.com/docs/atlas/api",
+      "https://mongodb.com/docs",
+      "https://mongodb.com/docs/api",
+      "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+      "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/",
+      "https://www.mongodb.com/docs/atlas/api/atlas-admin-api-ref/"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 69,
+    "name": "Datadog",
+    "category": "Developer, Infra and Data platforms",
+    "one_line_description": "Integration toolkit API for Datadog.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "admin_approval",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://docs.datadoghq.com/api",
+      "https://docs.datadoghq.com/docs",
+      "https://docs.datadoghq.com/developers",
+      "https://docs.datadoghq.com/api/latest/authentication/",
+      "https://docs.datadoghq.com/account_management/api-app-keys/",
+      "https://www.datadoghq.com/blog/datadog-api-authentication/",
+      "https://composio.dev/tools/datadog"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "datadog"
+  },
+  {
+    "id": 70,
+    "name": "Sentry",
+    "category": "Developer, Infra and Data platforms",
+    "one_line_description": "Integration toolkit API for Sentry.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://docs.sentry.io/api",
+      "https://docs.sentry.io/api/",
+      "https://docs.sentry.io/api/auth/",
+      "https://docs.sentry.io/api/guides/create-auth-token/",
+      "https://composio.dev/tools/sentry"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "sentry"
+  },
+  {
+    "id": 71,
+    "name": "Notion",
+    "category": "Productivity and Project Management",
+    "one_line_description": "Integration toolkit API for Notion.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://developers.notion.com",
+      "https://developers.notion.com/reference/authentication",
+      "https://developers.notion.com/guides/get-started/authorization",
+      "https://developers.notion.com/guides/get-started/overview",
+      "https://composio.dev/tools/notion"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "notion"
+  },
+  {
+    "id": 72,
+    "name": "Airtable",
+    "category": "Productivity and Project Management",
+    "one_line_description": "Integration toolkit API for Airtable.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://airtable.com/developers",
+      "https://airtable.com/api",
+      "https://www.airtable.com/developers/web/api/authentication",
+      "https://support.airtable.com/docs/creating-personal-access-tokens",
+      "https://docs.n8n.io/integrations/builtin/credentials/airtable",
+      "https://composio.dev/tools/airtable"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "airtable"
+  },
+  {
+    "id": 73,
+    "name": "Linear",
+    "category": "Productivity and Project Management",
+    "one_line_description": "Integration toolkit API for Linear.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest+graphql",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://developers.linear.app",
+      "https://developers.linear.app/docs",
+      "https://developers.linear.app/docs/api",
+      "https://developers.linear.app/developers",
+      "https://developers.linear.app/api",
+      "https://developers.linear.app/docs/authentication",
+      "https://linear.app/developers",
+      "https://linear.app/developers/oauth-2-0-authentication",
+      "https://linear.app/developers/graphql",
+      "https://composio.dev/tools/linear"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "linear"
+  },
+  {
+    "id": 74,
+    "name": "Jira",
+    "category": "Productivity and Project Management",
+    "one_line_description": "Integration toolkit API for Jira.",
+    "auth_methods": [
+      "oauth2",
+      "basic",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest+graphql",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://developer.atlassian.com",
+      "https://developer.atlassian.com/docs",
+      "https://developer.atlassian.com/docs/api",
+      "https://developer.atlassian.com/docs/authentication",
+      "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+      "https://community.atlassian.com/forums/Jira-questions/Jira-API-with-Basic-Auth-and-Service-Account/qaq-p/3119645",
+      "https://developer.atlassian.com/cloud/jira/software/rest/",
+      "https://composio.dev/tools/jira"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "jira"
+  },
+  {
+    "id": 75,
+    "name": "Asana",
+    "category": "Productivity and Project Management",
+    "one_line_description": "Integration toolkit API for Asana.",
+    "auth_methods": [
+      "oauth2",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://developers.asana.com",
+      "https://developers.asana.com/docs",
+      "https://developers.asana.com/docs/authentication",
+      "https://developers.asana.com/docs/api-explorer",
+      "https://developers.asana.com/docs/oauth",
+      "https://composio.dev/tools/asana"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "asana"
+  },
+  {
+    "id": 76,
+    "name": "Monday.com",
+    "category": "Productivity and Project Management",
+    "one_line_description": "Integration toolkit API for Monday.com.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest+graphql",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://developer.monday.com",
+      "https://developer.monday.com/docs",
+      "https://developer.monday.com/docs/api",
+      "https://developer.monday.com/developers",
+      "https://developer.monday.com/api",
+      "https://developer.monday.com/docs/authentication",
+      "https://developer.monday.com/api-reference/docs/authentication",
+      "https://developer.monday.com/apps/docs/choosing-auth",
+      "https://developer.monday.com/api-reference/docs/basics",
+      "https://composio.dev/tools/monday"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "monday"
+  },
+  {
+    "id": 77,
+    "name": "ClickUp",
+    "category": "Productivity and Project Management",
+    "one_line_description": "Integration toolkit API for ClickUp.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://clickup.com/api",
+      "https://clickup.com/docs",
+      "https://developers.clickup.com",
+      "https://developer.clickup.com/docs/authentication",
+      "https://developer.clickup.com/docs/Getting%20Started",
+      "https://developer.clickup.com/reference/getaccesstoken",
+      "https://composio.dev/tools/clickup"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "clickup"
+  },
+  {
+    "id": 78,
+    "name": "Coda",
+    "category": "Productivity and Project Management",
+    "one_line_description": "Integration toolkit API for Coda.",
+    "auth_methods": [
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://coda.io/developers",
+      "https://coda.io/docs",
+      "https://coda.io/api",
+      "https://coda.io/@oleg/getting-started-guide-coda-api/start-here-5",
+      "https://connect.superhuman.com/t/q-how-to-use-coda-api-in-packs-and-other-simple-examples-of-common-tasks/43062",
+      "https://www.postman.com/codaio/coda-workspace/collection/0vy7uxn/coda-api",
+      "https://composio.dev/tools/coda"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "coda"
+  },
+  {
+    "id": 79,
+    "name": "Smartsheet",
+    "category": "Productivity and Project Management",
+    "one_line_description": "Integration toolkit API for Smartsheet.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://smartsheet.com/developers",
+      "https://developers.smartsheet.com",
+      "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+      "https://developers.smartsheet.com/api/smartsheet/introduction",
+      "https://help.smartsheet.com/articles/2482389-generate-API-key"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 80,
+    "name": "Harvest",
+    "category": "Productivity and Project Management",
+    "one_line_description": "Integration toolkit API for Harvest.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://help.getharvest.com/api-v2",
+      "https://help.getharvest.com/api-v2/",
+      "https://harvestdocs.greenhouse.io/docs/authentication",
+      "https://www.getharvest.com/blog/2017/09/introducing-harvest-api-v2",
+      "https://composio.dev/tools/harvest"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "harvest"
+  },
+  {
+    "id": 81,
+    "name": "Stripe",
+    "category": "Finance and Fintech",
+    "one_line_description": "Integration toolkit API for Stripe.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://stripe.com/docs/api",
+      "https://stripe.com/docs",
+      "https://stripe.com/api",
+      "https://docs.stripe.com/api/authentication",
+      "https://docs.stripe.com/api",
+      "https://docs.stripe.com/stripe-apps/api-authentication",
+      "https://composio.dev/tools/stripe"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "stripe"
+  },
+  {
+    "id": 82,
+    "name": "Plaid",
+    "category": "Finance and Fintech",
+    "one_line_description": "Integration toolkit API for Plaid.",
+    "auth_methods": [
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://plaid.com/docs",
+      "https://plaid.com/docs/api",
+      "https://plaid.com/docs/api/products/auth/",
+      "https://plaid.com/docs/api/",
+      "https://plaid.com/docs/auth/"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 83,
+    "name": "Binance",
+    "category": "Finance and Fintech",
+    "one_line_description": "Integration toolkit API for Binance.",
+    "auth_methods": [
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://www.binance.com/en/binance-api",
+      "https://developers.binance.com/en/docs",
+      "https://docs.binance.us/"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 84,
+    "name": "Paygent Connect",
+    "category": "Finance and Fintech",
+    "one_line_description": "Integration toolkit API for Paygent Connect.",
+    "auth_methods": [
+      "api_key",
+      "basic",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://docs.payaconnect.com/developers/api/endpoints/authentication",
+      "https://developer.cybersource.com/api-reference-assets/index.html",
+      "https://developer.authorize.net/api/reference/index.html"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 85,
+    "name": "iPayX",
+    "category": "Finance and Fintech",
+    "one_line_description": "Integration toolkit API for iPayX.",
+    "auth_methods": [
+      "api_key",
+      "basic"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://ipayx.ai/docs",
+      "https://ipayx.ai/docs/api",
+      "https://ipayx.ai/developers",
+      "https://ipayx.ai/api",
+      "https://ipayx.ai/docs/authentication",
+      "https://developers.paytronix.com/pxs_api_reference/authentication.html",
+      "https://documentation.ixopay.com/modules/docs/tokenex/the-basics-1",
+      "https://developers.bluefin.com/payconex/docs/api-authentication"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 86,
+    "name": "QuickBooks",
+    "category": "Finance and Fintech",
+    "one_line_description": "Integration toolkit API for QuickBooks.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest+graphql",
+      "breadth": "moderate",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization",
+      "https://developer.intuit.com/app/developer/qbo/docs/develop",
+      "https://composio.dev/tools/quickbooks"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "quickbooks"
+  },
+  {
+    "id": 87,
+    "name": "Xero",
+    "category": "Finance and Fintech",
+    "one_line_description": "Integration toolkit API for Xero.",
+    "auth_methods": [
+      "oauth2",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://developer.xero.com",
+      "https://developer.xero.com/documentation/guides/oauth2/auth-flow/",
+      "https://developer.xero.com/documentation/guides/oauth2/overview/",
+      "https://developer.xero.com/",
+      "https://composio.dev/tools/xero"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "xero"
+  },
+  {
+    "id": 88,
+    "name": "Brex",
+    "category": "Finance and Fintech",
+    "one_line_description": "Integration toolkit API for Brex.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://developer.brex.com",
+      "https://developer.brex.com/docs/authentication",
+      "https://developer.brex.com/guides/authentication",
+      "https://developer.brex.com/",
+      "https://developer.brex.com/docs/faq",
+      "https://composio.dev/tools/brex"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "brex"
+  },
+  {
+    "id": 89,
+    "name": "Ramp",
+    "category": "Finance and Fintech",
+    "one_line_description": "Integration toolkit API for Ramp.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "moderate",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://docs.ramp.com",
+      "https://docs.ramp.com/docs",
+      "https://docs.ramp.com/developers",
+      "https://docs.ramp.com/api",
+      "https://docs.ramp.com/developer-api/v1/authorization",
+      "https://docs.ramp.com/developer-api/v1/getting-started",
+      "https://docs.ramp.com/developer-api/v1/overview/introduction",
+      "https://composio.dev/tools/ramp"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "ramp"
+  },
+  {
+    "id": 90,
+    "name": "PitchBook",
+    "category": "Finance and Fintech",
+    "one_line_description": "Integration toolkit API for PitchBook.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "narrow",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://documenter.getpostman.com/view/5190535/TzCV1iRc",
+      "https://dev.writer.com/connectors/pitchbook"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 91,
+    "name": "NotebookLM",
+    "category": "AI, Research and Media-native",
+    "one_line_description": "Integration toolkit API for NotebookLM.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "paid_plan_required",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://cloud.google.com/gemini",
+      "https://cloud.google.com/docs",
+      "https://cloud.google.com/developers",
+      "https://cloud.google.com/docs/authentication",
+      "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+      "https://www.reddit.com/r/notebooklm/comments/1eti9iz/api_for_notebooklm/",
+      "https://github.com/gnh1201/notebooklm-rest-api"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 92,
+    "name": "Otter AI",
+    "category": "AI, Research and Media-native",
+    "one_line_description": "Integration toolkit API for Otter AI.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": {
+      "model": "paid_plan_required",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://otter.ai/",
+      "https://github.com/gmchad/otterai-api"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 93,
+    "name": "Fathom",
+    "category": "AI, Research and Media-native",
+    "one_line_description": "Integration toolkit API for Fathom.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://fathom.video",
+      "https://developers.fathom.ai/api-overview",
+      "https://developers.fathom.ai/sdks/authentication",
+      "https://api-docs.fathom.global/usage.html",
+      "https://composio.dev/tools/fathom"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "fathom"
+  },
+  {
+    "id": 94,
+    "name": "Consensus",
+    "category": "AI, Research and Media-native",
+    "one_line_description": "Integration toolkit API for Consensus.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "moderate",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://support.goconsensus.com/consensus-api-documents",
+      "https://docs.ton.org/api/v2/blocks/get-consensus-block"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 95,
+    "name": "Reducto",
+    "category": "AI, Research and Media-native",
+    "one_line_description": "Integration toolkit API for Reducto.",
+    "auth_methods": [
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://reducto.ai",
+      "https://reducto.ai/docs",
+      "https://reducto.ai/docs/api",
+      "https://reducto.ai/developers",
+      "https://reducto.ai/docs/authentication",
+      "https://docs.reducto.ai/quickstart",
+      "https://reducto.ai/",
+      "https://docs.reducto.ai/agent-guide"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 96,
+    "name": "Devin",
+    "category": "AI, Research and Media-native",
+    "one_line_description": "Integration toolkit API for Devin.",
+    "auth_methods": [
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "admin_approval",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://docs.devin.ai",
+      "https://docs.devin.ai/api-reference/authentication",
+      "https://docs.devin.ai/api-reference/overview",
+      "https://docs.devin.ai/api-reference/v2/overview",
+      "https://composio.dev/tools/devin_mcp"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "devin_mcp"
+  },
+  {
+    "id": 97,
+    "name": "higgsfield",
+    "category": "AI, Research and Media-native",
+    "one_line_description": "Integration toolkit API for higgsfield.",
+    "auth_methods": [
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://higgsfield.ai",
+      "https://cloud.higgsfield.ai/",
+      "https://github.com/higgsfield-ai/higgsfield-client",
+      "https://apidog.com/blog/higgsfield-api/"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 98,
+    "name": "Mermaid CLI",
+    "category": "AI, Research and Media-native",
+    "one_line_description": "Integration toolkit API for Mermaid CLI.",
+    "auth_methods": [
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": false,
+      "mcp_source_url": null
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://github.com/mermaid-js/mermaid-cli",
+      "https://github.com/docs",
+      "https://github.com/developers",
+      "https://mermaid.ai/open-source/config/mermaidCLI.html",
+      "https://pypi.org/project/mermaid-cli/"
+    ],
+    "composio_in_catalog": false
+  },
+  {
+    "id": 99,
+    "name": "YouTube Transcript",
+    "category": "AI, Research and Media-native",
+    "one_line_description": "Integration toolkit API for YouTube Transcript.",
+    "auth_methods": [
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_free",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://transcriptapi.com",
+      "https://transcriptapi.com/docs",
+      "https://transcriptapi.com/docs/api",
+      "https://transcriptapi.com/developers",
+      "https://transcriptapi.com/docs/authentication",
+      "https://pypi.org/project/youtube-transcript-api/",
+      "https://dlthub.com/context/source/youtube-transcript-api",
+      "https://composio.dev/tools/youtube"
+    ],
+    "composio_in_catalog": true,
+    "composio_slug": "youtube"
+  },
+  {
+    "id": 100,
+    "name": "Grain",
+    "category": "AI, Research and Media-native",
+    "one_line_description": "Integration toolkit API for Grain.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "token"
+    ],
+    "access": {
+      "model": "self_serve_trial",
+      "evidence_url": null
+    },
+    "api_surface": {
+      "type": "rest",
+      "breadth": "broad",
+      "has_mcp": true,
+      "mcp_source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "buildability_verdict": "ready_today",
+    "main_blocker": null,
+    "confidence": "medium",
+    "agent_notes": "Extracted via rule-based document parsing fallback.",
+    "evidence": [
+      "https://grain.com",
+      "https://developers.grain.com/",
+      "https://mindcloud.co/docs/universal/rest/grain/latest/introduction/authentication",
+      "https://nango.dev/docs/integrations/all/grain-api-key"
+    ],
+    "composio_in_catalog": false
+  }
+]

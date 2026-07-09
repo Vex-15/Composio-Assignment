@@ -1,0 +1,26 @@
+# Composio App Research Pipeline — Dependencies
+# Install: pip install -r requirements.txt
+
+# HTTP client — async support, HTTP/2, clean API
+httpx[http2]>=0.27
+
+# HTML parsing — extract text from fetched developer docs
+beautifulsoup4>=4.12
+
+# LLM — Google Gemini for structured extraction
+google-generativeai>=0.8
+
+# Environment variable management
+python-dotenv>=1.0
+
+# Progress bars — visible pipeline state
+tqdm>=4.66
+
+# Retry logic — exponential backoff on failures
+tenacity>=8.2
+
+# Async rate limiting — don't hammer external sites
+aiolimiter>=1.1
+
+# Composio SDK — Stage 1 catalog lookup
+composio>=0.7

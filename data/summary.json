@@ -1,0 +1,2519 @@
+{
+  "executive_summary": [
+    "Api Key dominates authentication (81.0% of apps), followed by Token (69.0%).",
+    "74.0% of apps offer self-serve API access, making them immediate integration candidates for Composio.",
+    "Only 46.0% of apps have MCP servers — a massive opportunity for Composio to provide AI-native access.",
+    "92.0% of apps are ready for toolkit integration today, with 15 identified as high-priority easy wins."
+  ],
+  "total_apps": 100,
+  "auth_distribution": {
+    "counts": {
+      "api_key": 81,
+      "token": 69,
+      "oauth2": 54,
+      "basic": 28,
+      "unknown": 1
+    },
+    "percentages": {
+      "api_key": 81.0,
+      "token": 69.0,
+      "oauth2": 54.0,
+      "basic": 28.0,
+      "unknown": 1.0
+    },
+    "total_apps": 100,
+    "note": "Percentages may exceed 100% because apps can support multiple auth methods"
+  },
+  "api_type_distribution": {
+    "counts": {
+      "rest": 81,
+      "rest+graphql": 16,
+      "none_public": 2,
+      "unknown": 1
+    },
+    "percentages": {
+      "rest": 81.0,
+      "rest+graphql": 16.0,
+      "none_public": 2.0,
+      "unknown": 1.0
+    }
+  },
+  "access_model_distribution": {
+    "counts": {
+      "self_serve_free": 66,
+      "admin_approval": 11,
+      "paid_plan_required": 9,
+      "self_serve_trial": 8,
+      "partner_gated": 5,
+      "unknown": 1
+    },
+    "percentages": {
+      "self_serve_free": 66.0,
+      "admin_approval": 11.0,
+      "paid_plan_required": 9.0,
+      "self_serve_trial": 8.0,
+      "partner_gated": 5.0,
+      "unknown": 1.0
+    },
+    "self_serve_total": 74,
+    "self_serve_pct": 74.0,
+    "gated_total": 25,
+    "gated_pct": 25.0
+  },
+  "mcp_adoption": {
+    "has_mcp": 46,
+    "no_mcp": 53,
+    "unknown": 1,
+    "adoption_rate_pct": 46.0,
+    "mcp_apps": [
+      {
+        "id": 2,
+        "name": "HubSpot",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 4,
+        "name": "Attio",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 5,
+        "name": "Twenty",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 6,
+        "name": "Podio",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 7,
+        "name": "Zoho CRM",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 8,
+        "name": "Close",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 10,
+        "name": "DealCloud",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 12,
+        "name": "Intercom",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 14,
+        "name": "Front",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 15,
+        "name": "Pylon",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 17,
+        "name": "Plain",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 25,
+        "name": "Pumble",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 28,
+        "name": "WhatsApp Business",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 32,
+        "name": "Meta Ads",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 37,
+        "name": "systeme.io",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 39,
+        "name": "Threads",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 43,
+        "name": "BigCommerce",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 52,
+        "name": "SE Ranking",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 53,
+        "name": "Ahrefs",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 54,
+        "name": "MrScraper",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 55,
+        "name": "Apify",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 56,
+        "name": "Firecrawl",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 57,
+        "name": "Bright Data",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 58,
+        "name": "Sherlock",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 60,
+        "name": "Clay",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 62,
+        "name": "Vercel",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 63,
+        "name": "Netlify",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 65,
+        "name": "Supabase",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 69,
+        "name": "Datadog",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 74,
+        "name": "Jira",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 76,
+        "name": "Monday.com",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 77,
+        "name": "ClickUp",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 78,
+        "name": "Coda",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 79,
+        "name": "Smartsheet",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 81,
+        "name": "Stripe",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 82,
+        "name": "Plaid",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 87,
+        "name": "Xero",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 88,
+        "name": "Brex",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 90,
+        "name": "PitchBook",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 92,
+        "name": "Otter AI",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 94,
+        "name": "Consensus",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 95,
+        "name": "Reducto",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 96,
+        "name": "Devin",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 97,
+        "name": "higgsfield",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 99,
+        "name": "YouTube Transcript",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "id": 100,
+        "name": "Grain",
+        "mcp_url": "https://github.com/modelcontextprotocol/servers"
+      }
+    ]
+  },
+  "buildability": {
+    "counts": {
+      "ready_today": 92,
+      "blocked": 8
+    },
+    "percentages": {
+      "ready_today": 92.0,
+      "blocked": 8.0
+    },
+    "ready_today_pct": 92.0
+  },
+  "blocker_ranking": [
+    {
+      "blocker": "Requires partnership agreement or contact sales.",
+      "count": 4
+    },
+    {
+      "blocker": "No public developer API available.",
+      "count": 2
+    },
+    {
+      "blocker": "LLM extraction failed after all retries",
+      "count": 1
+    }
+  ],
+  "category_breakdown": {
+    "AI, Research and Media-native": {
+      "total_apps": 10,
+      "auth_distribution": {
+        "oauth2": 3,
+        "api_key": 9,
+        "token": 8
+      },
+      "access_distribution": {
+        "paid_plan_required": 1,
+        "self_serve_free": 7,
+        "admin_approval": 1,
+        "self_serve_trial": 1
+      },
+      "self_serve_pct": 80.0,
+      "buildability": {
+        "ready_today": 10
+      },
+      "ready_today_pct": 100.0,
+      "mcp_count": 7,
+      "apps": [
+        {
+          "id": 91,
+          "name": "NotebookLM"
+        },
+        {
+          "id": 92,
+          "name": "Otter AI"
+        },
+        {
+          "id": 93,
+          "name": "Fathom"
+        },
+        {
+          "id": 94,
+          "name": "Consensus"
+        },
+        {
+          "id": 95,
+          "name": "Reducto"
+        },
+        {
+          "id": 96,
+          "name": "Devin"
+        },
+        {
+          "id": 97,
+          "name": "higgsfield"
+        },
+        {
+          "id": 98,
+          "name": "Mermaid CLI"
+        },
+        {
+          "id": 99,
+          "name": "YouTube Transcript"
+        },
+        {
+          "id": 100,
+          "name": "Grain"
+        }
+      ]
+    },
+    "CRM and Sales": {
+      "total_apps": 10,
+      "auth_distribution": {
+        "unknown": 1,
+        "oauth2": 9,
+        "api_key": 9,
+        "token": 6,
+        "basic": 2
+      },
+      "access_distribution": {
+        "unknown": 1,
+        "self_serve_trial": 1,
+        "self_serve_free": 5,
+        "admin_approval": 1,
+        "paid_plan_required": 1,
+        "partner_gated": 1
+      },
+      "self_serve_pct": 60.0,
+      "buildability": {
+        "blocked": 2,
+        "ready_today": 8
+      },
+      "ready_today_pct": 80.0,
+      "mcp_count": 7,
+      "apps": [
+        {
+          "id": 1,
+          "name": "Salesforce"
+        },
+        {
+          "id": 2,
+          "name": "HubSpot"
+        },
+        {
+          "id": 3,
+          "name": "Pipedrive"
+        },
+        {
+          "id": 4,
+          "name": "Attio"
+        },
+        {
+          "id": 5,
+          "name": "Twenty"
+        },
+        {
+          "id": 6,
+          "name": "Podio"
+        },
+        {
+          "id": 7,
+          "name": "Zoho CRM"
+        },
+        {
+          "id": 8,
+          "name": "Close"
+        },
+        {
+          "id": 9,
+          "name": "Copper"
+        },
+        {
+          "id": 10,
+          "name": "DealCloud"
+        }
+      ]
+    },
+    "Communications and Messaging": {
+      "total_apps": 10,
+      "auth_distribution": {
+        "oauth2": 5,
+        "token": 8,
+        "api_key": 8,
+        "basic": 5
+      },
+      "access_distribution": {
+        "partner_gated": 1,
+        "paid_plan_required": 2,
+        "self_serve_free": 7
+      },
+      "self_serve_pct": 70.0,
+      "buildability": {
+        "blocked": 1,
+        "ready_today": 9
+      },
+      "ready_today_pct": 90.0,
+      "mcp_count": 2,
+      "apps": [
+        {
+          "id": 21,
+          "name": "Slack"
+        },
+        {
+          "id": 22,
+          "name": "Twilio"
+        },
+        {
+          "id": 23,
+          "name": "Zoho Cliq"
+        },
+        {
+          "id": 24,
+          "name": "Lark"
+        },
+        {
+          "id": 25,
+          "name": "Pumble"
+        },
+        {
+          "id": 26,
+          "name": "Discord"
+        },
+        {
+          "id": 27,
+          "name": "Telegram"
+        },
+        {
+          "id": 28,
+          "name": "WhatsApp Business"
+        },
+        {
+          "id": 29,
+          "name": "Aircall"
+        },
+        {
+          "id": 30,
+          "name": "Vonage"
+        }
+      ]
+    },
+    "Data, SEO and Scraping": {
+      "total_apps": 10,
+      "auth_distribution": {
+        "basic": 1,
+        "token": 8,
+        "api_key": 8,
+        "oauth2": 1
+      },
+      "access_distribution": {
+        "self_serve_free": 6,
+        "self_serve_trial": 2,
+        "paid_plan_required": 1,
+        "admin_approval": 1
+      },
+      "self_serve_pct": 80.0,
+      "buildability": {
+        "ready_today": 8,
+        "blocked": 2
+      },
+      "ready_today_pct": 80.0,
+      "mcp_count": 8,
+      "apps": [
+        {
+          "id": 51,
+          "name": "DataForSEO"
+        },
+        {
+          "id": 52,
+          "name": "SE Ranking"
+        },
+        {
+          "id": 53,
+          "name": "Ahrefs"
+        },
+        {
+          "id": 54,
+          "name": "MrScraper"
+        },
+        {
+          "id": 55,
+          "name": "Apify"
+        },
+        {
+          "id": 56,
+          "name": "Firecrawl"
+        },
+        {
+          "id": 57,
+          "name": "Bright Data"
+        },
+        {
+          "id": 58,
+          "name": "Sherlock"
+        },
+        {
+          "id": 59,
+          "name": "Waterfall.io"
+        },
+        {
+          "id": 60,
+          "name": "Clay"
+        }
+      ]
+    },
+    "Developer, Infra and Data platforms": {
+      "total_apps": 10,
+      "auth_distribution": {
+        "basic": 2,
+        "token": 9,
+        "oauth2": 7,
+        "api_key": 7
+      },
+      "access_distribution": {
+        "admin_approval": 3,
+        "partner_gated": 1,
+        "self_serve_free": 6
+      },
+      "self_serve_pct": 60.0,
+      "buildability": {
+        "ready_today": 9,
+        "blocked": 1
+      },
+      "ready_today_pct": 90.0,
+      "mcp_count": 4,
+      "apps": [
+        {
+          "id": 61,
+          "name": "GitHub"
+        },
+        {
+          "id": 62,
+          "name": "Vercel"
+        },
+        {
+          "id": 63,
+          "name": "Netlify"
+        },
+        {
+          "id": 64,
+          "name": "Cloudflare"
+        },
+        {
+          "id": 65,
+          "name": "Supabase"
+        },
+        {
+          "id": 66,
+          "name": "Neo4j"
+        },
+        {
+          "id": 67,
+          "name": "Snowflake"
+        },
+        {
+          "id": 68,
+          "name": "MongoDB Atlas"
+        },
+        {
+          "id": 69,
+          "name": "Datadog"
+        },
+        {
+          "id": 70,
+          "name": "Sentry"
+        }
+      ]
+    },
+    "Ecommerce": {
+      "total_apps": 10,
+      "auth_distribution": {
+        "oauth2": 4,
+        "api_key": 7,
+        "basic": 2,
+        "token": 5
+      },
+      "access_distribution": {
+        "self_serve_free": 6,
+        "admin_approval": 3,
+        "self_serve_trial": 1
+      },
+      "self_serve_pct": 70.0,
+      "buildability": {
+        "ready_today": 10
+      },
+      "ready_today_pct": 100.0,
+      "mcp_count": 1,
+      "apps": [
+        {
+          "id": 41,
+          "name": "Shopify"
+        },
+        {
+          "id": 42,
+          "name": "WooCommerce"
+        },
+        {
+          "id": 43,
+          "name": "BigCommerce"
+        },
+        {
+          "id": 44,
+          "name": "Salesforce Commerce Cloud"
+        },
+        {
+          "id": 45,
+          "name": "Magento"
+        },
+        {
+          "id": 46,
+          "name": "Squarespace"
+        },
+        {
+          "id": 47,
+          "name": "Ecwid"
+        },
+        {
+          "id": 48,
+          "name": "Gumroad"
+        },
+        {
+          "id": 49,
+          "name": "Amazon Selling Partner"
+        },
+        {
+          "id": 50,
+          "name": "fanbasis"
+        }
+      ]
+    },
+    "Finance and Fintech": {
+      "total_apps": 10,
+      "auth_distribution": {
+        "oauth2": 4,
+        "api_key": 8,
+        "token": 5,
+        "basic": 2
+      },
+      "access_distribution": {
+        "self_serve_free": 9,
+        "partner_gated": 1
+      },
+      "self_serve_pct": 90.0,
+      "buildability": {
+        "ready_today": 9,
+        "blocked": 1
+      },
+      "ready_today_pct": 90.0,
+      "mcp_count": 5,
+      "apps": [
+        {
+          "id": 81,
+          "name": "Stripe"
+        },
+        {
+          "id": 82,
+          "name": "Plaid"
+        },
+        {
+          "id": 83,
+          "name": "Binance"
+        },
+        {
+          "id": 84,
+          "name": "Paygent Connect"
+        },
+        {
+          "id": 85,
+          "name": "iPayX"
+        },
+        {
+          "id": 86,
+          "name": "QuickBooks"
+        },
+        {
+          "id": 87,
+          "name": "Xero"
+        },
+        {
+          "id": 88,
+          "name": "Brex"
+        },
+        {
+          "id": 89,
+          "name": "Ramp"
+        },
+        {
+          "id": 90,
+          "name": "PitchBook"
+        }
+      ]
+    },
+    "Marketing, Ads, Email and Social": {
+      "total_apps": 10,
+      "auth_distribution": {
+        "oauth2": 8,
+        "token": 5,
+        "api_key": 7,
+        "basic": 3
+      },
+      "access_distribution": {
+        "self_serve_free": 8,
+        "partner_gated": 1,
+        "paid_plan_required": 1
+      },
+      "self_serve_pct": 80.0,
+      "buildability": {
+        "ready_today": 9,
+        "blocked": 1
+      },
+      "ready_today_pct": 90.0,
+      "mcp_count": 3,
+      "apps": [
+        {
+          "id": 31,
+          "name": "Google Ads"
+        },
+        {
+          "id": 32,
+          "name": "Meta Ads"
+        },
+        {
+          "id": 33,
+          "name": "LinkedIn Ads"
+        },
+        {
+          "id": 34,
+          "name": "GoHighLevel"
+        },
+        {
+          "id": 35,
+          "name": "Mailchimp"
+        },
+        {
+          "id": 36,
+          "name": "Klaviyo"
+        },
+        {
+          "id": 37,
+          "name": "systeme.io"
+        },
+        {
+          "id": 38,
+          "name": "Pinterest"
+        },
+        {
+          "id": 39,
+          "name": "Threads"
+        },
+        {
+          "id": 40,
+          "name": "SendGrid"
+        }
+      ]
+    },
+    "Productivity and Project Management": {
+      "total_apps": 10,
+      "auth_distribution": {
+        "oauth2": 9,
+        "api_key": 8,
+        "basic": 4,
+        "token": 8
+      },
+      "access_distribution": {
+        "self_serve_free": 10
+      },
+      "self_serve_pct": 100.0,
+      "buildability": {
+        "ready_today": 10
+      },
+      "ready_today_pct": 100.0,
+      "mcp_count": 5,
+      "apps": [
+        {
+          "id": 71,
+          "name": "Notion"
+        },
+        {
+          "id": 72,
+          "name": "Airtable"
+        },
+        {
+          "id": 73,
+          "name": "Linear"
+        },
+        {
+          "id": 74,
+          "name": "Jira"
+        },
+        {
+          "id": 75,
+          "name": "Asana"
+        },
+        {
+          "id": 76,
+          "name": "Monday.com"
+        },
+        {
+          "id": 77,
+          "name": "ClickUp"
+        },
+        {
+          "id": 78,
+          "name": "Coda"
+        },
+        {
+          "id": 79,
+          "name": "Smartsheet"
+        },
+        {
+          "id": 80,
+          "name": "Harvest"
+        }
+      ]
+    },
+    "Support and Helpdesk": {
+      "total_apps": 10,
+      "auth_distribution": {
+        "api_key": 10,
+        "basic": 7,
+        "token": 7,
+        "oauth2": 4
+      },
+      "access_distribution": {
+        "paid_plan_required": 3,
+        "self_serve_trial": 3,
+        "admin_approval": 2,
+        "self_serve_free": 2
+      },
+      "self_serve_pct": 50.0,
+      "buildability": {
+        "ready_today": 10
+      },
+      "ready_today_pct": 100.0,
+      "mcp_count": 4,
+      "apps": [
+        {
+          "id": 11,
+          "name": "Zendesk"
+        },
+        {
+          "id": 12,
+          "name": "Intercom"
+        },
+        {
+          "id": 13,
+          "name": "Freshdesk"
+        },
+        {
+          "id": 14,
+          "name": "Front"
+        },
+        {
+          "id": 15,
+          "name": "Pylon"
+        },
+        {
+          "id": 16,
+          "name": "LiveAgent"
+        },
+        {
+          "id": 17,
+          "name": "Plain"
+        },
+        {
+          "id": 18,
+          "name": "Help Scout"
+        },
+        {
+          "id": 19,
+          "name": "Gorgias"
+        },
+        {
+          "id": 20,
+          "name": "Gladly"
+        }
+      ]
+    }
+  },
+  "easy_wins": [
+    {
+      "id": 9,
+      "name": "Copper",
+      "category": "CRM and Sales",
+      "access_model": "self_serve_free",
+      "api_breadth": "broad",
+      "has_mcp": false,
+      "in_composio": false,
+      "score": 7,
+      "reason": "Self-serve free, broad API, no MCP, not yet in Composio"
+    },
+    {
+      "id": 29,
+      "name": "Aircall",
+      "category": "Communications and Messaging",
+      "access_model": "self_serve_free",
+      "api_breadth": "broad",
+      "has_mcp": false,
+      "in_composio": false,
+      "score": 7,
+      "reason": "Self-serve free, broad API, no MCP, not yet in Composio"
+    },
+    {
+      "id": 30,
+      "name": "Vonage",
+      "category": "Communications and Messaging",
+      "access_model": "self_serve_free",
+      "api_breadth": "broad",
+      "has_mcp": false,
+      "in_composio": false,
+      "score": 7,
+      "reason": "Self-serve free, broad API, no MCP, not yet in Composio"
+    },
+    {
+      "id": 34,
+      "name": "GoHighLevel",
+      "category": "Marketing, Ads, Email and Social",
+      "access_model": "self_serve_free",
+      "api_breadth": "broad",
+      "has_mcp": false,
+      "in_composio": false,
+      "score": 7,
+      "reason": "Self-serve free, broad API, no MCP, not yet in Composio"
+    },
+    {
+      "id": 46,
+      "name": "Squarespace",
+      "category": "Ecommerce",
+      "access_model": "self_serve_free",
+      "api_breadth": "broad",
+      "has_mcp": false,
+      "in_composio": false,
+      "score": 7,
+      "reason": "Self-serve free, broad API, no MCP, not yet in Composio"
+    },
+    {
+      "id": 47,
+      "name": "Ecwid",
+      "category": "Ecommerce",
+      "access_model": "self_serve_free",
+      "api_breadth": "broad",
+      "has_mcp": false,
+      "in_composio": false,
+      "score": 7,
+      "reason": "Self-serve free, broad API, no MCP, not yet in Composio"
+    },
+    {
+      "id": 49,
+      "name": "Amazon Selling Partner",
+      "category": "Ecommerce",
+      "access_model": "self_serve_free",
+      "api_breadth": "broad",
+      "has_mcp": false,
+      "in_composio": false,
+      "score": 7,
+      "reason": "Self-serve free, broad API, no MCP, not yet in Composio"
+    },
+    {
+      "id": 59,
+      "name": "Waterfall.io",
+      "category": "Data, SEO and Scraping",
+      "access_model": "self_serve_free",
+      "api_breadth": "broad",
+      "has_mcp": false,
+      "in_composio": false,
+      "score": 7,
+      "reason": "Self-serve free, broad API, no MCP, not yet in Composio"
+    },
+    {
+      "id": 68,
+      "name": "MongoDB Atlas",
+      "category": "Developer, Infra and Data platforms",
+      "access_model": "self_serve_free",
+      "api_breadth": "broad",
+      "has_mcp": false,
+      "in_composio": false,
+      "score": 7,
+      "reason": "Self-serve free, broad API, no MCP, not yet in Composio"
+    },
+    {
+      "id": 83,
+      "name": "Binance",
+      "category": "Finance and Fintech",
+      "access_model": "self_serve_free",
+      "api_breadth": "broad",
+      "has_mcp": false,
+      "in_composio": false,
+      "score": 7,
+      "reason": "Self-serve free, broad API, no MCP, not yet in Composio"
+    },
+    {
+      "id": 85,
+      "name": "iPayX",
+      "category": "Finance and Fintech",
+      "access_model": "self_serve_free",
+      "api_breadth": "broad",
+      "has_mcp": false,
+      "in_composio": false,
+      "score": 7,
+      "reason": "Self-serve free, broad API, no MCP, not yet in Composio"
+    },
+    {
+      "id": 98,
+      "name": "Mermaid CLI",
+      "category": "AI, Research and Media-native",
+      "access_model": "self_serve_free",
+      "api_breadth": "broad",
+      "has_mcp": false,
+      "in_composio": false,
+      "score": 7,
+      "reason": "Self-serve free, broad API, no MCP, not yet in Composio"
+    },
+    {
+      "id": 50,
+      "name": "fanbasis",
+      "category": "Ecommerce",
+      "access_model": "self_serve_trial",
+      "api_breadth": "broad",
+      "has_mcp": false,
+      "in_composio": false,
+      "score": 6,
+      "reason": "Self-serve trial, broad API, no MCP, not yet in Composio"
+    },
+    {
+      "id": 5,
+      "name": "Twenty",
+      "category": "CRM and Sales",
+      "access_model": "self_serve_free",
+      "api_breadth": "broad",
+      "has_mcp": true,
+      "in_composio": false,
+      "score": 5,
+      "reason": "Self-serve free, broad API, has MCP, not yet in Composio"
+    },
+    {
+      "id": 10,
+      "name": "DealCloud",
+      "category": "CRM and Sales",
+      "access_model": "self_serve_free",
+      "api_breadth": "broad",
+      "has_mcp": true,
+      "in_composio": false,
+      "score": 5,
+      "reason": "Self-serve free, broad API, has MCP, not yet in Composio"
+    }
+  ],
+  "enterprise_only": [
+    {
+      "id": 6,
+      "name": "Podio",
+      "category": "CRM and Sales",
+      "access_model": "admin_approval",
+      "buildability": "ready_today",
+      "main_blocker": null
+    },
+    {
+      "id": 7,
+      "name": "Zoho CRM",
+      "category": "CRM and Sales",
+      "access_model": "paid_plan_required",
+      "buildability": "ready_today",
+      "main_blocker": null
+    },
+    {
+      "id": 8,
+      "name": "Close",
+      "category": "CRM and Sales",
+      "access_model": "partner_gated",
+      "buildability": "blocked",
+      "main_blocker": "Requires partnership agreement or contact sales."
+    },
+    {
+      "id": 11,
+      "name": "Zendesk",
+      "category": "Support and Helpdesk",
+      "access_model": "paid_plan_required",
+      "buildability": "ready_today",
+      "main_blocker": null
+    },
+    {
+      "id": 13,
+      "name": "Freshdesk",
+      "category": "Support and Helpdesk",
+      "access_model": "paid_plan_required",
+      "buildability": "ready_today",
+      "main_blocker": null
+    },
+    {
+      "id": 16,
+      "name": "LiveAgent",
+      "category": "Support and Helpdesk",
+      "access_model": "paid_plan_required",
+      "buildability": "ready_today",
+      "main_blocker": null
+    },
+    {
+      "id": 17,
+      "name": "Plain",
+      "category": "Support and Helpdesk",
+      "access_model": "admin_approval",
+      "buildability": "ready_today",
+      "main_blocker": null
+    },
+    {
+      "id": 18,
+      "name": "Help Scout",
+      "category": "Support and Helpdesk",
+      "access_model": "admin_approval",
+      "buildability": "ready_today",
+      "main_blocker": null
+    },
+    {
+      "id": 21,
+      "name": "Slack",
+      "category": "Communications and Messaging",
+      "access_model": "partner_gated",
+      "buildability": "blocked",
+      "main_blocker": "Requires partnership agreement or contact sales."
+    },
+    {
+      "id": 22,
+      "name": "Twilio",
+      "category": "Communications and Messaging",
+      "access_model": "paid_plan_required",
+      "buildability": "ready_today",
+      "main_blocker": null
+    },
+    {
+      "id": 23,
+      "name": "Zoho Cliq",
+      "category": "Communications and Messaging",
+      "access_model": "paid_plan_required",
+      "buildability": "ready_today",
+      "main_blocker": null
+    },
+    {
+      "id": 38,
+      "name": "Pinterest",
+      "category": "Marketing, Ads, Email and Social",
+      "access_model": "partner_gated",
+      "buildability": "blocked",
+      "main_blocker": "Requires partnership agreement or contact sales."
+    },
+    {
+      "id": 40,
+      "name": "SendGrid",
+      "category": "Marketing, Ads, Email and Social",
+      "access_model": "paid_plan_required",
+      "buildability": "ready_today",
+      "main_blocker": null
+    },
+    {
+      "id": 42,
+      "name": "WooCommerce",
+      "category": "Ecommerce",
+      "access_model": "admin_approval",
+      "buildability": "ready_today",
+      "main_blocker": null
+    },
+    {
+      "id": 43,
+      "name": "BigCommerce",
+      "category": "Ecommerce",
+      "access_model": "admin_approval",
+      "buildability": "ready_today",
+      "main_blocker": null
+    },
+    {
+      "id": 45,
+      "name": "Magento",
+      "category": "Ecommerce",
+      "access_model": "admin_approval",
+      "buildability": "ready_today",
+      "main_blocker": null
+    },
+    {
+      "id": 53,
+      "name": "Ahrefs",
+      "category": "Data, SEO and Scraping",
+      "access_model": "paid_plan_required",
+      "buildability": "ready_today",
+      "main_blocker": null
+    },
+    {
+      "id": 57,
+      "name": "Bright Data",
+      "category": "Data, SEO and Scraping",
+      "access_model": "admin_approval",
+      "buildability": "ready_today",
+      "main_blocker": null
+    },
+    {
+      "id": 61,
+      "name": "GitHub",
+      "category": "Developer, Infra and Data platforms",
+      "access_model": "admin_approval",
+      "buildability": "ready_today",
+      "main_blocker": null
+    },
+    {
+      "id": 62,
+      "name": "Vercel",
+      "category": "Developer, Infra and Data platforms",
+      "access_model": "partner_gated",
+      "buildability": "blocked",
+      "main_blocker": "Requires partnership agreement or contact sales."
+    },
+    {
+      "id": 67,
+      "name": "Snowflake",
+      "category": "Developer, Infra and Data platforms",
+      "access_model": "admin_approval",
+      "buildability": "ready_today",
+      "main_blocker": null
+    },
+    {
+      "id": 69,
+      "name": "Datadog",
+      "category": "Developer, Infra and Data platforms",
+      "access_model": "admin_approval",
+      "buildability": "ready_today",
+      "main_blocker": null
+    },
+    {
+      "id": 84,
+      "name": "Paygent Connect",
+      "category": "Finance and Fintech",
+      "access_model": "partner_gated",
+      "buildability": "blocked",
+      "main_blocker": null
+    },
+    {
+      "id": 91,
+      "name": "NotebookLM",
+      "category": "AI, Research and Media-native",
+      "access_model": "paid_plan_required",
+      "buildability": "ready_today",
+      "main_blocker": null
+    },
+    {
+      "id": 96,
+      "name": "Devin",
+      "category": "AI, Research and Media-native",
+      "access_model": "admin_approval",
+      "buildability": "ready_today",
+      "main_blocker": null
+    }
+  ],
+  "confidence_distribution": {
+    "counts": {
+      "medium": 99,
+      "low": 1
+    },
+    "percentages": {
+      "medium": 99.0,
+      "low": 1.0
+    }
+  },
+  "verification": {
+    "sample_size": 20,
+    "total_fields_compared": 80,
+    "total_agreements": 66,
+    "total_disagreements": 14,
+    "overall_accuracy_pct": 82.5,
+    "per_field_accuracy": {
+      "auth_methods": {
+        "accuracy": 55.0,
+        "agreements": 11,
+        "disagreements": 9,
+        "total": 20,
+        "common_patterns": [
+          {
+            "app": "Twenty",
+            "pass1": [
+              "oauth2",
+              "api_key",
+              "token"
+            ],
+            "pass2": [
+              "oauth2",
+              "api_key",
+              "basic",
+              "token"
+            ],
+            "notes": "Disagreement: Pass 1 says ['oauth2', 'api_key', 'token'], Pass 2 says ['oauth2', 'api_key', 'basic', 'token']"
+          },
+          {
+            "app": "Vercel",
+            "pass1": [
+              "api_key",
+              "token"
+            ],
+            "pass2": [
+              "oauth2",
+              "api_key",
+              "token"
+            ],
+            "notes": "Disagreement: Pass 1 says ['api_key', 'token'], Pass 2 says ['oauth2', 'api_key', 'token']"
+          },
+          {
+            "app": "Snowflake",
+            "pass1": [
+              "oauth2",
+              "basic",
+              "token"
+            ],
+            "pass2": [
+              "oauth2",
+              "token"
+            ],
+            "notes": "Disagreement: Pass 1 says ['oauth2', 'basic', 'token'], Pass 2 says ['oauth2', 'token']"
+          },
+          {
+            "app": "Shopify",
+            "pass1": [
+              "oauth2",
+              "api_key",
+              "token"
+            ],
+            "pass2": [
+              "oauth2"
+            ],
+            "notes": "Disagreement: Pass 1 says ['oauth2', 'api_key', 'token'], Pass 2 says ['oauth2']"
+          },
+          {
+            "app": "Paygent Connect",
+            "pass1": [
+              "api_key",
+              "basic",
+              "token"
+            ],
+            "pass2": [
+              "oauth2",
+              "api_key",
+              "basic",
+              "token"
+            ],
+            "notes": "Disagreement: Pass 1 says ['api_key', 'basic', 'token'], Pass 2 says ['oauth2', 'api_key', 'basic', 'token']"
+          }
+        ]
+      },
+      "access.model": {
+        "accuracy": 80.0,
+        "agreements": 16,
+        "disagreements": 4,
+        "total": 20,
+        "common_patterns": [
+          {
+            "app": "Otter AI",
+            "pass1": "paid_plan_required",
+            "pass2": "self_serve_free",
+            "notes": "Disagreement: Pass 1 says paid_plan_required, Pass 2 says self_serve_free"
+          },
+          {
+            "app": "Twenty",
+            "pass1": "self_serve_trial",
+            "pass2": "self_serve_free",
+            "notes": "Disagreement: Pass 1 says self_serve_trial, Pass 2 says self_serve_free"
+          },
+          {
+            "app": "Attio",
+            "pass1": "self_serve_trial",
+            "pass2": "self_serve_free",
+            "notes": "Disagreement: Pass 1 says self_serve_trial, Pass 2 says self_serve_free"
+          },
+          {
+            "app": "Paygent Connect",
+            "pass1": "self_serve_free",
+            "pass2": "partner_gated",
+            "notes": "Disagreement: Pass 1 says self_serve_free, Pass 2 says partner_gated"
+          }
+        ]
+      },
+      "api_surface.type": {
+        "accuracy": 100.0,
+        "agreements": 20,
+        "disagreements": 0,
+        "total": 20,
+        "common_patterns": []
+      },
+      "buildability_verdict": {
+        "accuracy": 95.0,
+        "agreements": 19,
+        "disagreements": 1,
+        "total": 20,
+        "common_patterns": [
+          {
+            "app": "Paygent Connect",
+            "pass1": "ready_today",
+            "pass2": "blocked",
+            "notes": "Disagreement: Pass 1 says ready_today, Pass 2 says blocked"
+          }
+        ]
+      }
+    },
+    "corrections": [
+      {
+        "app_name": "Otter AI",
+        "app_id": 92,
+        "field": "access.model",
+        "original_value": "paid_plan_required",
+        "verified_value": "self_serve_free",
+        "resolution": "manual_review_needed",
+        "reason": "Disagreement: Pass 1 says paid_plan_required, Pass 2 says self_serve_free"
+      },
+      {
+        "app_name": "Twenty",
+        "app_id": 5,
+        "field": "auth_methods",
+        "original_value": [
+          "oauth2",
+          "api_key",
+          "token"
+        ],
+        "verified_value": [
+          "oauth2",
+          "api_key",
+          "basic",
+          "token"
+        ],
+        "resolution": "manual_review_needed",
+        "reason": "Disagreement: Pass 1 says ['oauth2', 'api_key', 'token'], Pass 2 says ['oauth2', 'api_key', 'basic', 'token']"
+      },
+      {
+        "app_name": "Twenty",
+        "app_id": 5,
+        "field": "access.model",
+        "original_value": "self_serve_trial",
+        "verified_value": "self_serve_free",
+        "resolution": "manual_review_needed",
+        "reason": "Disagreement: Pass 1 says self_serve_trial, Pass 2 says self_serve_free"
+      },
+      {
+        "app_name": "Attio",
+        "app_id": 4,
+        "field": "access.model",
+        "original_value": "self_serve_trial",
+        "verified_value": "self_serve_free",
+        "resolution": "manual_review_needed",
+        "reason": "Disagreement: Pass 1 says self_serve_trial, Pass 2 says self_serve_free"
+      },
+      {
+        "app_name": "Vercel",
+        "app_id": 62,
+        "field": "auth_methods",
+        "original_value": [
+          "api_key",
+          "token"
+        ],
+        "verified_value": [
+          "oauth2",
+          "api_key",
+          "token"
+        ],
+        "resolution": "manual_review_needed",
+        "reason": "Disagreement: Pass 1 says ['api_key', 'token'], Pass 2 says ['oauth2', 'api_key', 'token']"
+      },
+      {
+        "app_name": "Snowflake",
+        "app_id": 67,
+        "field": "auth_methods",
+        "original_value": [
+          "oauth2",
+          "basic",
+          "token"
+        ],
+        "verified_value": [
+          "oauth2",
+          "token"
+        ],
+        "resolution": "manual_review_needed",
+        "reason": "Disagreement: Pass 1 says ['oauth2', 'basic', 'token'], Pass 2 says ['oauth2', 'token']"
+      },
+      {
+        "app_name": "Shopify",
+        "app_id": 41,
+        "field": "auth_methods",
+        "original_value": [
+          "oauth2",
+          "api_key",
+          "token"
+        ],
+        "verified_value": [
+          "oauth2"
+        ],
+        "resolution": "manual_review_needed",
+        "reason": "Disagreement: Pass 1 says ['oauth2', 'api_key', 'token'], Pass 2 says ['oauth2']"
+      },
+      {
+        "app_name": "Paygent Connect",
+        "app_id": 84,
+        "field": "auth_methods",
+        "original_value": [
+          "api_key",
+          "basic",
+          "token"
+        ],
+        "verified_value": [
+          "oauth2",
+          "api_key",
+          "basic",
+          "token"
+        ],
+        "resolution": "manual_review_needed",
+        "reason": "Disagreement: Pass 1 says ['api_key', 'basic', 'token'], Pass 2 says ['oauth2', 'api_key', 'basic', 'token']"
+      },
+      {
+        "app_name": "Paygent Connect",
+        "app_id": 84,
+        "field": "access.model",
+        "original_value": "self_serve_free",
+        "verified_value": "partner_gated",
+        "resolution": "manual_review_needed",
+        "reason": "Disagreement: Pass 1 says self_serve_free, Pass 2 says partner_gated"
+      },
+      {
+        "app_name": "Paygent Connect",
+        "app_id": 84,
+        "field": "buildability_verdict",
+        "original_value": "ready_today",
+        "verified_value": "blocked",
+        "resolution": "manual_review_needed",
+        "reason": "Disagreement: Pass 1 says ready_today, Pass 2 says blocked"
+      },
+      {
+        "app_name": "GoHighLevel",
+        "app_id": 34,
+        "field": "auth_methods",
+        "original_value": [
+          "oauth2",
+          "api_key"
+        ],
+        "verified_value": [
+          "oauth2",
+          "api_key",
+          "basic"
+        ],
+        "resolution": "manual_review_needed",
+        "reason": "Disagreement: Pass 1 says ['oauth2', 'api_key'], Pass 2 says ['oauth2', 'api_key', 'basic']"
+      },
+      {
+        "app_name": "Threads",
+        "app_id": 39,
+        "field": "auth_methods",
+        "original_value": [
+          "oauth2"
+        ],
+        "verified_value": [
+          "oauth2",
+          "api_key",
+          "token"
+        ],
+        "resolution": "manual_review_needed",
+        "reason": "Disagreement: Pass 1 says ['oauth2'], Pass 2 says ['oauth2', 'api_key', 'token']"
+      },
+      {
+        "app_name": "Gorgias",
+        "app_id": 19,
+        "field": "auth_methods",
+        "original_value": [
+          "api_key",
+          "basic",
+          "token"
+        ],
+        "verified_value": [
+          "oauth2",
+          "api_key",
+          "basic",
+          "token"
+        ],
+        "resolution": "manual_review_needed",
+        "reason": "Disagreement: Pass 1 says ['api_key', 'basic', 'token'], Pass 2 says ['oauth2', 'api_key', 'basic', 'token']"
+      },
+      {
+        "app_name": "Front",
+        "app_id": 14,
+        "field": "auth_methods",
+        "original_value": [
+          "oauth2",
+          "token"
+        ],
+        "verified_value": [
+          "api_key",
+          "basic",
+          "token"
+        ],
+        "resolution": "manual_review_needed",
+        "reason": "Disagreement: Pass 1 says ['oauth2', 'token'], Pass 2 says ['api_key', 'basic', 'token']"
+      }
+    ],
+    "timestamp": "2026-07-09T04:33:59.052433+00:00"
+  },
+  "comparison_records": [
+    {
+      "app_id": 92,
+      "app_name": "Otter AI",
+      "category": "AI, Research and Media-native",
+      "fields_compared": 4,
+      "fields_agreed": 3,
+      "fields_disagreed": 1,
+      "comparisons": [
+        {
+          "field": "auth_methods",
+          "pass1_value": [
+            "api_key"
+          ],
+          "pass2_value": [
+            "api_key"
+          ],
+          "agree": true
+        },
+        {
+          "field": "access.model",
+          "pass1_value": "paid_plan_required",
+          "pass2_value": "self_serve_free",
+          "agree": false,
+          "notes": "Disagreement: Pass 1 says paid_plan_required, Pass 2 says self_serve_free",
+          "better_pass": "manual_review_needed"
+        },
+        {
+          "field": "api_surface.type",
+          "pass1_value": "rest",
+          "pass2_value": "rest",
+          "agree": true
+        },
+        {
+          "field": "buildability_verdict",
+          "pass1_value": "ready_today",
+          "pass2_value": "ready_today",
+          "agree": true
+        }
+      ]
+    },
+    {
+      "app_id": 91,
+      "app_name": "NotebookLM",
+      "category": "AI, Research and Media-native",
+      "fields_compared": 4,
+      "fields_agreed": 4,
+      "fields_disagreed": 0,
+      "comparisons": [
+        {
+          "field": "auth_methods",
+          "pass1_value": [
+            "oauth2",
+            "api_key",
+            "token"
+          ],
+          "pass2_value": [
+            "oauth2",
+            "api_key",
+            "token"
+          ],
+          "agree": true
+        },
+        {
+          "field": "access.model",
+          "pass1_value": "paid_plan_required",
+          "pass2_value": "paid_plan_required",
+          "agree": true
+        },
+        {
+          "field": "api_surface.type",
+          "pass1_value": "rest",
+          "pass2_value": "rest",
+          "agree": true
+        },
+        {
+          "field": "buildability_verdict",
+          "pass1_value": "ready_today",
+          "pass2_value": "ready_today",
+          "agree": true
+        }
+      ]
+    },
+    {
+      "app_id": 5,
+      "app_name": "Twenty",
+      "category": "CRM and Sales",
+      "fields_compared": 4,
+      "fields_agreed": 2,
+      "fields_disagreed": 2,
+      "comparisons": [
+        {
+          "field": "auth_methods",
+          "pass1_value": [
+            "oauth2",
+            "api_key",
+            "token"
+          ],
+          "pass2_value": [
+            "oauth2",
+            "api_key",
+            "basic",
+            "token"
+          ],
+          "agree": false,
+          "notes": "Disagreement: Pass 1 says ['oauth2', 'api_key', 'token'], Pass 2 says ['oauth2', 'api_key', 'basic', 'token']",
+          "better_pass": "manual_review_needed"
+        },
+        {
+          "field": "access.model",
+          "pass1_value": "self_serve_trial",
+          "pass2_value": "self_serve_free",
+          "agree": false,
+          "notes": "Disagreement: Pass 1 says self_serve_trial, Pass 2 says self_serve_free",
+          "better_pass": "manual_review_needed"
+        },
+        {
+          "field": "api_surface.type",
+          "pass1_value": "rest+graphql",
+          "pass2_value": "rest+graphql",
+          "agree": true
+        },
+        {
+          "field": "buildability_verdict",
+          "pass1_value": "ready_today",
+          "pass2_value": "ready_today",
+          "agree": true
+        }
+      ]
+    },
+    {
+      "app_id": 4,
+      "app_name": "Attio",
+      "category": "CRM and Sales",
+      "fields_compared": 4,
+      "fields_agreed": 3,
+      "fields_disagreed": 1,
+      "comparisons": [
+        {
+          "field": "auth_methods",
+          "pass1_value": [
+            "oauth2",
+            "api_key"
+          ],
+          "pass2_value": [
+            "oauth2",
+            "api_key"
+          ],
+          "agree": true
+        },
+        {
+          "field": "access.model",
+          "pass1_value": "self_serve_trial",
+          "pass2_value": "self_serve_free",
+          "agree": false,
+          "notes": "Disagreement: Pass 1 says self_serve_trial, Pass 2 says self_serve_free",
+          "better_pass": "manual_review_needed"
+        },
+        {
+          "field": "api_surface.type",
+          "pass1_value": "rest",
+          "pass2_value": "rest",
+          "agree": true
+        },
+        {
+          "field": "buildability_verdict",
+          "pass1_value": "ready_today",
+          "pass2_value": "ready_today",
+          "agree": true
+        }
+      ]
+    },
+    {
+      "app_id": 24,
+      "app_name": "Lark",
+      "category": "Communications and Messaging",
+      "fields_compared": 4,
+      "fields_agreed": 4,
+      "fields_disagreed": 0,
+      "comparisons": [
+        {
+          "field": "auth_methods",
+          "pass1_value": [
+            "api_key"
+          ],
+          "pass2_value": [
+            "api_key"
+          ],
+          "agree": true
+        },
+        {
+          "field": "access.model",
+          "pass1_value": "self_serve_free",
+          "pass2_value": "self_serve_free",
+          "agree": true
+        },
+        {
+          "field": "api_surface.type",
+          "pass1_value": "rest",
+          "pass2_value": "rest",
+          "agree": true
+        },
+        {
+          "field": "buildability_verdict",
+          "pass1_value": "ready_today",
+          "pass2_value": "ready_today",
+          "agree": true
+        }
+      ]
+    },
+    {
+      "app_id": 23,
+      "app_name": "Zoho Cliq",
+      "category": "Communications and Messaging",
+      "fields_compared": 4,
+      "fields_agreed": 4,
+      "fields_disagreed": 0,
+      "comparisons": [
+        {
+          "field": "auth_methods",
+          "pass1_value": [
+            "oauth2",
+            "api_key",
+            "token"
+          ],
+          "pass2_value": [
+            "oauth2",
+            "api_key",
+            "token"
+          ],
+          "agree": true
+        },
+        {
+          "field": "access.model",
+          "pass1_value": "paid_plan_required",
+          "pass2_value": "paid_plan_required",
+          "agree": true
+        },
+        {
+          "field": "api_surface.type",
+          "pass1_value": "rest",
+          "pass2_value": "rest",
+          "agree": true
+        },
+        {
+          "field": "buildability_verdict",
+          "pass1_value": "ready_today",
+          "pass2_value": "ready_today",
+          "agree": true
+        }
+      ]
+    },
+    {
+      "app_id": 52,
+      "app_name": "SE Ranking",
+      "category": "Data, SEO and Scraping",
+      "fields_compared": 4,
+      "fields_agreed": 4,
+      "fields_disagreed": 0,
+      "comparisons": [
+        {
+          "field": "auth_methods",
+          "pass1_value": [
+            "api_key",
+            "token"
+          ],
+          "pass2_value": [
+            "api_key",
+            "token"
+          ],
+          "agree": true
+        },
+        {
+          "field": "access.model",
+          "pass1_value": "self_serve_trial",
+          "pass2_value": "self_serve_trial",
+          "agree": true
+        },
+        {
+          "field": "api_surface.type",
+          "pass1_value": "rest",
+          "pass2_value": "rest",
+          "agree": true
+        },
+        {
+          "field": "buildability_verdict",
+          "pass1_value": "ready_today",
+          "pass2_value": "ready_today",
+          "agree": true
+        }
+      ]
+    },
+    {
+      "app_id": 59,
+      "app_name": "Waterfall.io",
+      "category": "Data, SEO and Scraping",
+      "fields_compared": 4,
+      "fields_agreed": 4,
+      "fields_disagreed": 0,
+      "comparisons": [
+        {
+          "field": "auth_methods",
+          "pass1_value": [
+            "api_key"
+          ],
+          "pass2_value": [
+            "api_key"
+          ],
+          "agree": true
+        },
+        {
+          "field": "access.model",
+          "pass1_value": "self_serve_free",
+          "pass2_value": "self_serve_free",
+          "agree": true
+        },
+        {
+          "field": "api_surface.type",
+          "pass1_value": "rest",
+          "pass2_value": "rest",
+          "agree": true
+        },
+        {
+          "field": "buildability_verdict",
+          "pass1_value": "ready_today",
+          "pass2_value": "ready_today",
+          "agree": true
+        }
+      ]
+    },
+    {
+      "app_id": 62,
+      "app_name": "Vercel",
+      "category": "Developer, Infra and Data platforms",
+      "fields_compared": 4,
+      "fields_agreed": 3,
+      "fields_disagreed": 1,
+      "comparisons": [
+        {
+          "field": "auth_methods",
+          "pass1_value": [
+            "api_key",
+            "token"
+          ],
+          "pass2_value": [
+            "oauth2",
+            "api_key",
+            "token"
+          ],
+          "agree": false,
+          "notes": "Disagreement: Pass 1 says ['api_key', 'token'], Pass 2 says ['oauth2', 'api_key', 'token']",
+          "better_pass": "manual_review_needed"
+        },
+        {
+          "field": "access.model",
+          "pass1_value": "partner_gated",
+          "pass2_value": "partner_gated",
+          "agree": true
+        },
+        {
+          "field": "api_surface.type",
+          "pass1_value": "rest",
+          "pass2_value": "rest",
+          "agree": true
+        },
+        {
+          "field": "buildability_verdict",
+          "pass1_value": "blocked",
+          "pass2_value": "blocked",
+          "agree": true
+        }
+      ]
+    },
+    {
+      "app_id": 67,
+      "app_name": "Snowflake",
+      "category": "Developer, Infra and Data platforms",
+      "fields_compared": 4,
+      "fields_agreed": 3,
+      "fields_disagreed": 1,
+      "comparisons": [
+        {
+          "field": "auth_methods",
+          "pass1_value": [
+            "oauth2",
+            "basic",
+            "token"
+          ],
+          "pass2_value": [
+            "oauth2",
+            "token"
+          ],
+          "agree": false,
+          "notes": "Disagreement: Pass 1 says ['oauth2', 'basic', 'token'], Pass 2 says ['oauth2', 'token']",
+          "better_pass": "manual_review_needed"
+        },
+        {
+          "field": "access.model",
+          "pass1_value": "admin_approval",
+          "pass2_value": "admin_approval",
+          "agree": true
+        },
+        {
+          "field": "api_surface.type",
+          "pass1_value": "rest",
+          "pass2_value": "rest",
+          "agree": true
+        },
+        {
+          "field": "buildability_verdict",
+          "pass1_value": "ready_today",
+          "pass2_value": "ready_today",
+          "agree": true
+        }
+      ]
+    },
+    {
+      "app_id": 41,
+      "app_name": "Shopify",
+      "category": "Ecommerce",
+      "fields_compared": 4,
+      "fields_agreed": 3,
+      "fields_disagreed": 1,
+      "comparisons": [
+        {
+          "field": "auth_methods",
+          "pass1_value": [
+            "oauth2",
+            "api_key",
+            "token"
+          ],
+          "pass2_value": [
+            "oauth2"
+          ],
+          "agree": false,
+          "notes": "Disagreement: Pass 1 says ['oauth2', 'api_key', 'token'], Pass 2 says ['oauth2']",
+          "better_pass": "manual_review_needed"
+        },
+        {
+          "field": "access.model",
+          "pass1_value": "self_serve_free",
+          "pass2_value": "self_serve_free",
+          "agree": true
+        },
+        {
+          "field": "api_surface.type",
+          "pass1_value": "rest+graphql",
+          "pass2_value": "rest+graphql",
+          "agree": true
+        },
+        {
+          "field": "buildability_verdict",
+          "pass1_value": "ready_today",
+          "pass2_value": "ready_today",
+          "agree": true
+        }
+      ]
+    },
+    {
+      "app_id": 50,
+      "app_name": "fanbasis",
+      "category": "Ecommerce",
+      "fields_compared": 4,
+      "fields_agreed": 4,
+      "fields_disagreed": 0,
+      "comparisons": [
+        {
+          "field": "auth_methods",
+          "pass1_value": [
+            "api_key",
+            "token"
+          ],
+          "pass2_value": [
+            "api_key",
+            "token"
+          ],
+          "agree": true
+        },
+        {
+          "field": "access.model",
+          "pass1_value": "self_serve_trial",
+          "pass2_value": "self_serve_trial",
+          "agree": true
+        },
+        {
+          "field": "api_surface.type",
+          "pass1_value": "rest",
+          "pass2_value": "rest",
+          "agree": true
+        },
+        {
+          "field": "buildability_verdict",
+          "pass1_value": "ready_today",
+          "pass2_value": "ready_today",
+          "agree": true
+        }
+      ]
+    },
+    {
+      "app_id": 82,
+      "app_name": "Plaid",
+      "category": "Finance and Fintech",
+      "fields_compared": 4,
+      "fields_agreed": 4,
+      "fields_disagreed": 0,
+      "comparisons": [
+        {
+          "field": "auth_methods",
+          "pass1_value": [
+            "api_key",
+            "token"
+          ],
+          "pass2_value": [
+            "api_key",
+            "token"
+          ],
+          "agree": true
+        },
+        {
+          "field": "access.model",
+          "pass1_value": "self_serve_free",
+          "pass2_value": "self_serve_free",
+          "agree": true
+        },
+        {
+          "field": "api_surface.type",
+          "pass1_value": "rest",
+          "pass2_value": "rest",
+          "agree": true
+        },
+        {
+          "field": "buildability_verdict",
+          "pass1_value": "ready_today",
+          "pass2_value": "ready_today",
+          "agree": true
+        }
+      ]
+    },
+    {
+      "app_id": 84,
+      "app_name": "Paygent Connect",
+      "category": "Finance and Fintech",
+      "fields_compared": 4,
+      "fields_agreed": 1,
+      "fields_disagreed": 3,
+      "comparisons": [
+        {
+          "field": "auth_methods",
+          "pass1_value": [
+            "api_key",
+            "basic",
+            "token"
+          ],
+          "pass2_value": [
+            "oauth2",
+            "api_key",
+            "basic",
+            "token"
+          ],
+          "agree": false,
+          "notes": "Disagreement: Pass 1 says ['api_key', 'basic', 'token'], Pass 2 says ['oauth2', 'api_key', 'basic', 'token']",
+          "better_pass": "manual_review_needed"
+        },
+        {
+          "field": "access.model",
+          "pass1_value": "self_serve_free",
+          "pass2_value": "partner_gated",
+          "agree": false,
+          "notes": "Disagreement: Pass 1 says self_serve_free, Pass 2 says partner_gated",
+          "better_pass": "manual_review_needed"
+        },
+        {
+          "field": "api_surface.type",
+          "pass1_value": "rest",
+          "pass2_value": "rest",
+          "agree": true
+        },
+        {
+          "field": "buildability_verdict",
+          "pass1_value": "ready_today",
+          "pass2_value": "blocked",
+          "agree": false,
+          "notes": "Disagreement: Pass 1 says ready_today, Pass 2 says blocked",
+          "better_pass": "manual_review_needed"
+        }
+      ]
+    },
+    {
+      "app_id": 34,
+      "app_name": "GoHighLevel",
+      "category": "Marketing, Ads, Email and Social",
+      "fields_compared": 4,
+      "fields_agreed": 3,
+      "fields_disagreed": 1,
+      "comparisons": [
+        {
+          "field": "auth_methods",
+          "pass1_value": [
+            "oauth2",
+            "api_key"
+          ],
+          "pass2_value": [
+            "oauth2",
+            "api_key",
+            "basic"
+          ],
+          "agree": false,
+          "notes": "Disagreement: Pass 1 says ['oauth2', 'api_key'], Pass 2 says ['oauth2', 'api_key', 'basic']",
+          "better_pass": "manual_review_needed"
+        },
+        {
+          "field": "access.model",
+          "pass1_value": "self_serve_free",
+          "pass2_value": "self_serve_free",
+          "agree": true
+        },
+        {
+          "field": "api_surface.type",
+          "pass1_value": "rest",
+          "pass2_value": "rest",
+          "agree": true
+        },
+        {
+          "field": "buildability_verdict",
+          "pass1_value": "ready_today",
+          "pass2_value": "ready_today",
+          "agree": true
+        }
+      ]
+    },
+    {
+      "app_id": 39,
+      "app_name": "Threads",
+      "category": "Marketing, Ads, Email and Social",
+      "fields_compared": 4,
+      "fields_agreed": 3,
+      "fields_disagreed": 1,
+      "comparisons": [
+        {
+          "field": "auth_methods",
+          "pass1_value": [
+            "oauth2"
+          ],
+          "pass2_value": [
+            "oauth2",
+            "api_key",
+            "token"
+          ],
+          "agree": false,
+          "notes": "Disagreement: Pass 1 says ['oauth2'], Pass 2 says ['oauth2', 'api_key', 'token']",
+          "better_pass": "manual_review_needed"
+        },
+        {
+          "field": "access.model",
+          "pass1_value": "self_serve_free",
+          "pass2_value": "self_serve_free",
+          "agree": true
+        },
+        {
+          "field": "api_surface.type",
+          "pass1_value": "rest",
+          "pass2_value": "rest",
+          "agree": true
+        },
+        {
+          "field": "buildability_verdict",
+          "pass1_value": "ready_today",
+          "pass2_value": "ready_today",
+          "agree": true
+        }
+      ]
+    },
+    {
+      "app_id": 80,
+      "app_name": "Harvest",
+      "category": "Productivity and Project Management",
+      "fields_compared": 4,
+      "fields_agreed": 4,
+      "fields_disagreed": 0,
+      "comparisons": [
+        {
+          "field": "auth_methods",
+          "pass1_value": [
+            "oauth2",
+            "api_key",
+            "basic",
+            "token"
+          ],
+          "pass2_value": [
+            "oauth2",
+            "api_key",
+            "basic",
+            "token"
+          ],
+          "agree": true
+        },
+        {
+          "field": "access.model",
+          "pass1_value": "self_serve_free",
+          "pass2_value": "self_serve_free",
+          "agree": true
+        },
+        {
+          "field": "api_surface.type",
+          "pass1_value": "rest",
+          "pass2_value": "rest",
+          "agree": true
+        },
+        {
+          "field": "buildability_verdict",
+          "pass1_value": "ready_today",
+          "pass2_value": "ready_today",
+          "agree": true
+        }
+      ]
+    },
+    {
+      "app_id": 71,
+      "app_name": "Notion",
+      "category": "Productivity and Project Management",
+      "fields_compared": 4,
+      "fields_agreed": 4,
+      "fields_disagreed": 0,
+      "comparisons": [
+        {
+          "field": "auth_methods",
+          "pass1_value": [
+            "oauth2",
+            "api_key",
+            "basic",
+            "token"
+          ],
+          "pass2_value": [
+            "oauth2",
+            "api_key",
+            "basic",
+            "token"
+          ],
+          "agree": true
+        },
+        {
+          "field": "access.model",
+          "pass1_value": "self_serve_free",
+          "pass2_value": "self_serve_free",
+          "agree": true
+        },
+        {
+          "field": "api_surface.type",
+          "pass1_value": "rest",
+          "pass2_value": "rest",
+          "agree": true
+        },
+        {
+          "field": "buildability_verdict",
+          "pass1_value": "ready_today",
+          "pass2_value": "ready_today",
+          "agree": true
+        }
+      ]
+    },
+    {
+      "app_id": 19,
+      "app_name": "Gorgias",
+      "category": "Support and Helpdesk",
+      "fields_compared": 4,
+      "fields_agreed": 3,
+      "fields_disagreed": 1,
+      "comparisons": [
+        {
+          "field": "auth_methods",
+          "pass1_value": [
+            "api_key",
+            "basic",
+            "token"
+          ],
+          "pass2_value": [
+            "oauth2",
+            "api_key",
+            "basic",
+            "token"
+          ],
+          "agree": false,
+          "notes": "Disagreement: Pass 1 says ['api_key', 'basic', 'token'], Pass 2 says ['oauth2', 'api_key', 'basic', 'token']",
+          "better_pass": "manual_review_needed"
+        },
+        {
+          "field": "access.model",
+          "pass1_value": "self_serve_free",
+          "pass2_value": "self_serve_free",
+          "agree": true
+        },
+        {
+          "field": "api_surface.type",
+          "pass1_value": "rest",
+          "pass2_value": "rest",
+          "agree": true
+        },
+        {
+          "field": "buildability_verdict",
+          "pass1_value": "ready_today",
+          "pass2_value": "ready_today",
+          "agree": true
+        }
+      ]
+    },
+    {
+      "app_id": 14,
+      "app_name": "Front",
+      "category": "Support and Helpdesk",
+      "fields_compared": 4,
+      "fields_agreed": 3,
+      "fields_disagreed": 1,
+      "comparisons": [
+        {
+          "field": "auth_methods",
+          "pass1_value": [
+            "oauth2",
+            "token"
+          ],
+          "pass2_value": [
+            "api_key",
+            "basic",
+            "token"
+          ],
+          "agree": false,
+          "notes": "Disagreement: Pass 1 says ['oauth2', 'token'], Pass 2 says ['api_key', 'basic', 'token']",
+          "better_pass": "manual_review_needed"
+        },
+        {
+          "field": "access.model",
+          "pass1_value": "self_serve_trial",
+          "pass2_value": "self_serve_trial",
+          "agree": true
+        },
+        {
+          "field": "api_surface.type",
+          "pass1_value": "rest",
+          "pass2_value": "rest",
+          "agree": true
+        },
+        {
+          "field": "buildability_verdict",
+          "pass1_value": "ready_today",
+          "pass2_value": "ready_today",
+          "agree": true
+        }
+      ]
+    }
+  ]
+}
